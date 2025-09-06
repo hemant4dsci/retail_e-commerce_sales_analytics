@@ -3,14 +3,19 @@ import logging
 from sqlalchemy import MetaData, Table, Column, Integer, Numeric, String
 
 logging.basicConfig(
-    filename="../configs/get_vendor_summary.log",
+    filename="../configs/vendor_summary.log",
     level=logging.DEBUG,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+    filemode="w",
 )
+
+logger = logging.getLogger(__name__)  # module level logger
+
 
 def create_vendor_summary(engine):
     """This function will merge the diffrent tables to get the overall vendor summary and adding new columns in the resultant data"""
+
+    logger.info("Started vendor summary creation")
 
     summary_query = """
     WITH purchase_summary AS (
@@ -64,7 +69,15 @@ def create_vendor_summary(engine):
     LEFT JOIN vendors v 
         ON p.vendor_id = v.vendor_id;
     """
-    vendor_purchase_sales = pd.read_sql(sql=summary_query, con=engine)
+
+    try:
+        vendor_purchase_sales = pd.read_sql(sql=summary_query, con=engine)
+        logger.info(
+            "SQL query executed successfully. retrived %d rows",
+            len(vendor_purchase_sales),
+        )
+    except Exception as e:
+        logger.error("Error executing SQL queries: %s", str(e))
 
     # metadata object keeps track of tables
     metadata = MetaData()
@@ -88,10 +101,19 @@ def create_vendor_summary(engine):
     )
 
     """ Creating Table in """
-    metadata.create_all(engine)
+    try:
+        metadata.create_all(engine)
+        logger.info("Table vendor purchase sales created successfully")
+    except Exception as e:
+        logger.error("Error creating table: %s", str(e))
+    try:
+        vendor_purchase_sales.to_sql(
+            "vendor_purchase_sales_summary", engine, if_exists="replace", index=False
+        )
+        logger.info("Data inserted in table succefully")
+    except Exception as e:
+        logger.error("Error inserting data into table: %s", str(e))
 
-    vendor_purchase_sales.to_sql(
-        "vendor_purchase_sales_summary", engine, if_exists="replace", index=False
-    )
+    logger.info("Vendor summary process completed successfully")
 
     return vendor_purchase_sales
