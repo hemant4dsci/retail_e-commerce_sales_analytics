@@ -3,7 +3,7 @@ import logging
 from sqlalchemy import MetaData, Table, Column, Integer, Numeric, String
 
 logging.basicConfig(
-    filename="../configs/vendor_summary.log",
+    filename="../configs/project_logger.log",
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
     filemode="w",
@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)  # module level logger
 
 
 def create_vendor_summary(engine):
-    """This function will merge the diffarent tables to get the overall vendor summary and adding new columns in the resultant data"""
+    # This function will merge the diffarent tables to get the overall vendor summary
 
     logger.info("Started vendor summary creation")
 
@@ -42,7 +42,7 @@ def create_vendor_summary(engine):
     freight_summary AS (
         SELECT 
             vendor_id,
-            SUM(freight_cost) AS total_freight_cost
+            AVG(freight_cost) AS total_freight_cost
         FROM vendor_invoice
         GROUP BY vendor_id
     )
@@ -82,7 +82,7 @@ def create_vendor_summary(engine):
     # metadata object keeps track of tables
     metadata = MetaData()
 
-    """ Defining the table structure """
+    # Defining the table structure
     create_table = Table(
         "vendor_purchase_sales_summary",  # table name
         metadata,  # attach to metadata
@@ -100,14 +100,14 @@ def create_vendor_summary(engine):
         Column("total_freight_cost", Numeric(15, 2)),
     )
 
-    """ Creating Table in Database """
+    # Creating Table in Database
     try:
         metadata.create_all(engine)
         logger.info("Table vendor purchase sales created successfully")
     except Exception as e:
         logger.error("Error creating table: %s", str(e))
     
-    """ Inserting the data in the newly created empty table """
+    # Inserting the data in the newly created empty table
     try:
         vendor_purchase_sales.to_sql(
             "vendor_purchase_sales_summary", engine, if_exists="replace", index=False
