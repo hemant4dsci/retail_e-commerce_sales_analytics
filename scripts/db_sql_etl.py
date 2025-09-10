@@ -1,6 +1,7 @@
 import pandas as pd
 import logging
-from sqlalchemy import MetaData, Table, Column, INTEGER, NUMERIC, VARCHAR, DATE, CHAR
+from sqlalchemy import Column, INTEGER, NUMERIC, VARCHAR, DATE, CHAR
+from sqlalchemy.orm import declarative_base
 
 logging.basicConfig(
     filename="../configs/project_logger.log",
@@ -11,11 +12,45 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)  # module level logger
 
+# Base class for ORM
+Base = declarative_base()
+
+
+# Defining table as a class
+class SalesSummary(Base):
+    __tablename__ = "sales_summary"
+
+    # Columns
+    id = Column(INTEGER, primary_key=True, autoincrement=True)  # Primary key
+    dates = Column(DATE)
+    years = Column(INTEGER)
+    quarters = Column(CHAR(2))
+    months = Column(VARCHAR(255))
+    channel_name = Column(VARCHAR(255))
+    brand_name = Column(VARCHAR(255))
+    class_name = Column(VARCHAR(255))
+    continent_name = Column(VARCHAR(255))
+    country_name = Column(VARCHAR(255))
+    state_province_name = Column(VARCHAR(255))
+    product_category_name = Column(VARCHAR(255))
+    product_sub_category_name = Column(VARCHAR(255))
+    unit_cost = Column(NUMERIC(10, 2))
+    unit_price = Column(NUMERIC(10, 2))
+    sales_quantity = Column(INTEGER)
+    return_quantity = Column(INTEGER)
+    return_amount = Column(NUMERIC(10, 2))
+    discount_quantity = Column(INTEGER)
+    discount_amount = Column(NUMERIC(10, 2))
+    total_cost = Column(NUMERIC(15, 2))
+    total_sales = Column(NUMERIC(15, 2))
+    net_sales = Column(NUMERIC(15, 2))
+    net_profit = Column(NUMERIC(15, 2))
+
 
 def create_sales_summary(engine):
-    # This function will merge the diffarent tables to get the overall vendor summary
+    # This function will merge the diffarent tables to get the overall Sales Summary
 
-    logger.info("Started sales summary creation")
+    logger.info("Started Sales Summary creation")
 
     summary_query = """
         WITH sales_summary AS(
@@ -79,8 +114,8 @@ def create_sales_summary(engine):
             "SQL query executed successfully. retrived %d rows",
             len(df),
         )
-    except Exception as e:
-        logger.error("Error executing SQL queries: %s", str(e))
+    except Exception as exc:
+        logger.error("Error executing SQL queries: %s", str(exc))
 
     logger.info("Data cleaning Started")
 
@@ -88,8 +123,8 @@ def create_sales_summary(engine):
     try:
         df.fillna(0, inplace=True)
         logger.info("Replaced the missing value with 0")
-    except Exception as e:
-        logger.error("Error filling missing value", str(e))
+    except Exception as exc:
+        logger.error("Error filling missing value", str(exc))
 
     # # Removing leading and trailing spaces
     try:
@@ -106,8 +141,8 @@ def create_sales_summary(engine):
         ]:
             df[col] = df[col].astype(str).str.strip()
         logger.info("Successfully removed extra spaces")
-    except Exception as e:
-        logger.error("Error while removing extra spaces", str(e))
+    except Exception as exc:
+        logger.error("Error while removing extra spaces", str(exc))
 
     # Now creating some new columns or features for better analysis
     try:
@@ -118,59 +153,28 @@ def create_sales_summary(engine):
         ).round(2)
         df["net_profit"] = (df["net_sales"] - df["total_cost"]).round(2)
         logger.info("Created new columns successfully")
-    except Exception as e:
-        logger.error("Error while creating new columns", str(e))
-
-    # metadata object keeps track of tables
-    metadata = MetaData()
-
-    # Defining the table structure
-    create_table = Table(
-        "sales_summary",  # table name
-        metadata,  # attach to metadata
-        Column("dates", DATE),
-        Column("years", INTEGER),
-        Column("quarters", CHAR(2)),
-        Column("months", VARCHAR(255)),
-        Column("channel_name", VARCHAR(255)),
-        Column("brand_name", VARCHAR(255)),
-        Column("class_name", VARCHAR(255)),
-        Column("continent_name", VARCHAR(255)),
-        Column("country_name", VARCHAR(255)),
-        Column("state_province_name", VARCHAR(255)),
-        Column("product_category_name", VARCHAR(255)),
-        Column("product_sub_category_name", VARCHAR(255)),
-        Column("unit_cost", NUMERIC(10, 2)),
-        Column("unit_price", NUMERIC(10, 2)),
-        Column("sales_quantity", INTEGER),
-        Column("return_quantity", INTEGER),
-        Column("return_amount", NUMERIC(10, 2)),
-        Column("discount_quantity", INTEGER),
-        Column("discount_amount", NUMERIC(10, 2)),
-        Column("total_cost", NUMERIC(15, 2)),
-        Column("total_sales", NUMERIC(15, 2)),
-        Column("net_sales", NUMERIC(15, 2)),
-        Column("net_profit", NUMERIC(15, 2)),
-    )
+    except Exception as exc:
+        logger.error("Error while creating new columns", str(exc))
 
     # Creating Table in Database
     try:
-        metadata.create_all(engine)
+        Base.metadata.drop_all(engine)  # Drop old table
+        Base.metadata.create_all(engine)  # Create new table
         logger.info("empty sales_summary table created in Data-Base")
-    except Exception as e:
-        logger.error("Error creating table in Date-Base: %s", str(e))
+    except Exception as exc:
+        logger.error("Error creating table in Date-Base: %s", str(exc))
 
     # Inserting data in the newly created empty table
     try:
         df.to_sql(
             name="sales_summary",
             con=engine,
-            if_exists="replace",
+            if_exists="append",
             index=False,
         )
         logger.info("Data-Frame inserted in sales_summary table successfully")
-    except Exception as e:
-        logger.error("Error inserting data into sales_summary table: %s", str(e))
+    except Exception as exc:
+        logger.error("Error inserting data into sales_summary table: %s", str(exc))
 
     logger.info("sales_summary table created in Data-Base successfully")
 
