@@ -23,23 +23,14 @@ class SalesSummary(Base):
     # Columns
     id = Column(INTEGER, primary_key=True, autoincrement=True)  # Primary key
     dates = Column(DATE)
-    years = Column(INTEGER)
+    years = Column(CHAR(4))
     quarters = Column(CHAR(2))
-    months = Column(VARCHAR(255))
     channel_name = Column(VARCHAR(255))
     brand_name = Column(VARCHAR(255))
-    class_name = Column(VARCHAR(255))
     continent_name = Column(VARCHAR(255))
     country_name = Column(VARCHAR(255))
-    state_province_name = Column(VARCHAR(255))
     product_category_name = Column(VARCHAR(255))
-    product_sub_category_name = Column(VARCHAR(255))
-    unit_cost = Column(NUMERIC(10, 2))
-    unit_price = Column(NUMERIC(10, 2))
-    sales_quantity = Column(INTEGER)
-    return_quantity = Column(INTEGER)
     return_amount = Column(NUMERIC(10, 2))
-    discount_quantity = Column(INTEGER)
     discount_amount = Column(NUMERIC(10, 2))
     total_cost = Column(NUMERIC(15, 2))
     total_sales = Column(NUMERIC(15, 2))
@@ -63,9 +54,7 @@ def create_sales_summary(engine):
                 MIN(unit_cost) AS unit_cost,
                 MIN(unit_price) AS unit_price,
                 SUM(sales_quantity) AS sales_quantity,
-                SUM(return_quantity) AS return_quantity,
                 SUM(return_amount) AS return_amount,
-                SUM(discount_quantity) AS discount_quantity,
                 SUM(discount_amount) AS discount_amount
             FROM sales
             GROUP BY 
@@ -79,22 +68,16 @@ def create_sales_summary(engine):
             ss.dates,
             cd.years,
             cd.quarters,
-            cd.months,
             ch.channel_name,
             pd.brand_name,
-            pd.class_name,
             gg.continent_name,
             gg.country_name,
-            gg.state_province_name,
             psc.product_category_name,
-            psc.product_sub_category_name,
-            ss.unit_cost,
-            ss.unit_price,
-            ss.sales_quantity,
-            ss.return_quantity,
-            ss.return_amount,
-            ss.discount_quantity,
-            ss.discount_amount
+            MIN(ss.unit_cost) AS unit_cost,
+            MIN(ss.unit_price) AS unit_price,
+            SUM(ss.sales_quantity) AS sales_quantity,
+            SUM(ss.return_amount) AS return_amount,
+            SUM(ss.discount_amount) AS discount_amount
         FROM sales_summary ss
         LEFT JOIN calender cd
             ON ss.dates = cd.dates
@@ -105,7 +88,16 @@ def create_sales_summary(engine):
         LEFT JOIN geography gg
             ON ss.geo_key = gg.geo_key
         LEFT JOIN product_sub_category psc
-            ON ss.product_sub_category_key = psc.product_sub_category_key;
+            ON ss.product_sub_category_key = psc.product_sub_category_key
+        GROUP BY
+            ss.dates,
+            cd.years,
+            cd.quarters,
+            ch.channel_name,
+            pd.brand_name,
+            gg.continent_name,
+            gg.country_name,
+            psc.product_category_name;
     """
 
     try:
@@ -129,15 +121,11 @@ def create_sales_summary(engine):
     # # Removing leading and trailing spaces
     try:
         for col in [
-            "months",
             "channel_name",
             "brand_name",
-            "class_name",
             "continent_name",
             "country_name",
-            "state_province_name",
             "product_category_name",
-            "product_sub_category_name",
         ]:
             df[col] = df[col].astype(str).str.strip()
         logger.info("Successfully removed extra spaces")
@@ -155,6 +143,15 @@ def create_sales_summary(engine):
         logger.info("Created new columns successfully")
     except Exception as exc:
         logger.error("Error while creating new columns", str(exc))
+
+    # Now deleting some columns from data frame which is not necessory
+    try:
+        df.drop(
+            columns=["unit_cost", "unit_price", "sales_quantity"], axis=1, inplace=True
+        )
+        logger.info("Successfully deleted unwanted columns")
+    except Exception as exc:
+        logger.error("Error while deleting columns", str(exc))
 
     # Creating Table in Database
     try:
@@ -178,4 +175,4 @@ def create_sales_summary(engine):
 
     logger.info("sales_summary table created in Data-Base successfully")
 
-    return "ETL Process is completed successfully"
+    return print("ETL Process is completed successfully")
