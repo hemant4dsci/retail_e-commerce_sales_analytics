@@ -36,6 +36,8 @@ class SalesSummary(Base):
     total_sales = Column(NUMERIC(15, 2))
     net_sales = Column(NUMERIC(15, 2))
     net_profit = Column(NUMERIC(15, 2))
+    profit_margin = Column(NUMERIC(10, 2))
+    sales_to_profit_ratio = Column(NUMERIC(10, 2))
 
 
 def create_sales_summary(engine):
@@ -45,7 +47,7 @@ def create_sales_summary(engine):
 
     summary_query = """
         WITH sales_summary AS(
-            SELECT 
+            SELECT
                 dates,
                 channel_key,
                 product_key,
@@ -56,7 +58,8 @@ def create_sales_summary(engine):
                 SUM(sales_quantity) AS sales_quantity,
                 SUM(return_amount) AS return_amount,
                 SUM(discount_amount) AS discount_amount
-            FROM sales
+            FROM
+                sales
             GROUP BY 
                 dates,
                 channel_key,
@@ -78,17 +81,18 @@ def create_sales_summary(engine):
             SUM(ss.sales_quantity) AS sales_quantity,
             SUM(ss.return_amount) AS return_amount,
             SUM(ss.discount_amount) AS discount_amount
-        FROM sales_summary ss
-        LEFT JOIN calender cd
-            ON ss.dates = cd.dates
-        LEFT JOIN channels ch
-            ON ss.channel_key = ch.channel_key
-        LEFT JOIN products pd
-            ON ss.product_key = pd.product_key
-        LEFT JOIN geography gg
-            ON ss.geo_key = gg.geo_key
-        LEFT JOIN product_sub_category psc
-            ON ss.product_sub_category_key = psc.product_sub_category_key
+        FROM
+            sales_summary ss
+            LEFT JOIN calender cd
+                ON ss.dates = cd.dates
+            LEFT JOIN channels ch
+                ON ss.channel_key = ch.channel_key
+            LEFT JOIN products pd
+                ON ss.product_key = pd.product_key
+            LEFT JOIN geography gg
+                ON ss.geo_key = gg.geo_key
+            LEFT JOIN product_sub_category psc
+                ON ss.product_sub_category_key = psc.product_sub_category_key
         GROUP BY
             ss.dates,
             cd.years,
@@ -140,6 +144,8 @@ def create_sales_summary(engine):
             df["total_sales"] - (df["return_amount"] + df["discount_amount"])
         ).round(2)
         df["net_profit"] = (df["net_sales"] - df["total_cost"]).round(2)
+        df["profit_margin"] = ((df["net_profit"] / df["net_sales"]) * 100).round(2)
+        df["sales_to_profit_ratio"] = (df["net_sales"] / df["net_profit"]).round(2)
         logger.info("Created new columns successfully")
     except Exception as exc:
         logger.error("Error while creating new columns", str(exc))
