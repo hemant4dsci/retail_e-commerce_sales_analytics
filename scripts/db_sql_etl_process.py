@@ -37,7 +37,6 @@ class SalesSummary(Base):
     net_sales = Column(NUMERIC(15, 2))
     net_profit = Column(NUMERIC(15, 2))
     profit_margin = Column(NUMERIC(10, 2))
-    sales_to_profit_ratio = Column(NUMERIC(10, 2))
 
 
 def create_sales_summary(engine):
@@ -145,8 +144,6 @@ def create_sales_summary(engine):
         ).round(2)
         df["net_profit"] = (df["net_sales"] - df["total_cost"]).round(2)
         df["profit_margin"] = ((df["net_profit"] / df["net_sales"]) * 100).round(2)
-        df["sales_to_profit_ratio"] = (df["net_sales"] / df["net_profit"]).round(2)
-        logger.info("Created new columns successfully")
     except Exception as exc:
         logger.error("Error while creating new columns", str(exc))
 
