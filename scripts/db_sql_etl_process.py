@@ -25,11 +25,11 @@ class SalesSummary(Base):
     dates = Column(DATE)
     years = Column(CHAR(4))
     quarters = Column(CHAR(2))
-    channel_name = Column(VARCHAR(255))
-    brand_name = Column(VARCHAR(255))
-    continent_name = Column(VARCHAR(255))
-    country_name = Column(VARCHAR(255))
-    product_category_name = Column(VARCHAR(255))
+    channel = Column(VARCHAR(255))
+    brand = Column(VARCHAR(255))
+    continent = Column(VARCHAR(255))
+    country = Column(VARCHAR(255))
+    product_category = Column(VARCHAR(255))
     return_amount = Column(NUMERIC(10, 2))
     discount_amount = Column(NUMERIC(10, 2))
     total_cost = Column(NUMERIC(15, 2))
@@ -121,7 +121,7 @@ def create_sales_summary(engine):
     except Exception as exc:
         logger.error("Error filling missing value", str(exc))
 
-    # # Removing leading and trailing spaces
+    # Removing leading and trailing spaces and renaming columns
     try:
         for col in [
             "channel_name",
@@ -134,6 +134,21 @@ def create_sales_summary(engine):
         logger.info("Successfully removed extra spaces")
     except Exception as exc:
         logger.error("Error while removing extra spaces", str(exc))
+
+    # Renaming some columns
+    try:
+        df = df.rename(
+            columns={
+                "channel_name": "channel",
+                "brand_name": "brand",
+                "continent_name": "continent",
+                "country_name": "country",
+                "product_category_name": "product_category",
+            }
+        )
+        logger.info("Successfully renamed columns")
+    except Exception as exc:
+        logger.error("Error while renaming columns", str(exc))
 
     # Now creating some new columns or features for better analysis
     try:
