@@ -1,6 +1,6 @@
 import pandas as pd
 import logging
-from sqlalchemy import Column, INTEGER, NUMERIC, VARCHAR, DATE, CHAR
+from sqlalchemy import Column, INTEGER, NUMERIC, VARCHAR, DATE
 from sqlalchemy.orm import declarative_base
 
 logging.basicConfig(
@@ -23,20 +23,16 @@ class SalesSummary(Base):
     # Columns
     id = Column(INTEGER, primary_key=True, autoincrement=True)  # Primary key
     dates = Column(DATE)
-    years = Column(CHAR(4))
-    quarters = Column(CHAR(2))
     channel = Column(VARCHAR(255))
     brand = Column(VARCHAR(255))
-    continent = Column(VARCHAR(255))
-    country = Column(VARCHAR(255))
     product_category = Column(VARCHAR(255))
+    country = Column(VARCHAR(255))
     return_amount = Column(NUMERIC(10, 2))
     discount_amount = Column(NUMERIC(10, 2))
     total_cost = Column(NUMERIC(15, 2))
     total_sales = Column(NUMERIC(15, 2))
     net_sales = Column(NUMERIC(15, 2))
     net_profit = Column(NUMERIC(15, 2))
-    profit_margin = Column(NUMERIC(10, 2))
 
 
 def create_sales_summary(engine):
@@ -68,13 +64,10 @@ def create_sales_summary(engine):
         )
         SELECT
             ss.dates,
-            cd.years,
-            cd.quarters,
-            ch.channel_name,
-            pd.brand_name,
-            gg.continent_name,
-            gg.country_name,
-            psc.product_category_name,
+            ch.channel_name AS channel,
+            pd.brand_name AS brand,
+            psc.product_category_name AS product_category,
+            gg.country_name AS country,
             MIN(ss.unit_cost) AS unit_cost,
             MIN(ss.unit_price) AS unit_price,
             SUM(ss.sales_quantity) AS sales_quantity,
@@ -82,8 +75,6 @@ def create_sales_summary(engine):
             SUM(ss.discount_amount) AS discount_amount
         FROM
             sales_summary ss
-            LEFT JOIN calender cd
-                ON ss.dates = cd.dates
             LEFT JOIN channels ch
                 ON ss.channel_key = ch.channel_key
             LEFT JOIN products pd
@@ -94,13 +85,10 @@ def create_sales_summary(engine):
                 ON ss.product_sub_category_key = psc.product_sub_category_key
         GROUP BY
             ss.dates,
-            cd.years,
-            cd.quarters,
             ch.channel_name,
             pd.brand_name,
-            gg.continent_name,
-            gg.country_name,
-            psc.product_category_name;
+            psc.product_category_name,
+            gg.country_name;
     """
 
     try:
@@ -121,34 +109,18 @@ def create_sales_summary(engine):
     except Exception as exc:
         logger.error("Error filling missing value", str(exc))
 
-    # Removing leading and trailing spaces and renaming columns
+    # Removing leading and trailing spaces
     try:
         for col in [
-            "channel_name",
-            "brand_name",
-            "continent_name",
-            "country_name",
-            "product_category_name",
+            "channel",
+            "brand",
+            "product_category",
+            "country",
         ]:
             df[col] = df[col].astype(str).str.strip()
         logger.info("Successfully removed extra spaces")
     except Exception as exc:
         logger.error("Error while removing extra spaces", str(exc))
-
-    # Renaming some columns
-    try:
-        df = df.rename(
-            columns={
-                "channel_name": "channel",
-                "brand_name": "brand",
-                "continent_name": "continent",
-                "country_name": "country",
-                "product_category_name": "product_category",
-            }
-        )
-        logger.info("Successfully renamed columns")
-    except Exception as exc:
-        logger.error("Error while renaming columns", str(exc))
 
     # Now creating some new columns or features for better analysis
     try:
@@ -158,7 +130,6 @@ def create_sales_summary(engine):
             df["total_sales"] - (df["return_amount"] + df["discount_amount"])
         ).round(2)
         df["net_profit"] = (df["net_sales"] - df["total_cost"]).round(2)
-        df["profit_margin"] = ((df["net_profit"] / df["net_sales"]) * 100).round(2)
     except Exception as exc:
         logger.error("Error while creating new columns", str(exc))
 
@@ -175,7 +146,7 @@ def create_sales_summary(engine):
     try:
         Base.metadata.drop_all(engine)  # Drop old table
         Base.metadata.create_all(engine)  # Create new table
-        logger.info("empty sales_summary table created in Data-Base")
+        logger.info("Empty sales_summary table created in Data-Base")
     except Exception as exc:
         logger.error("Error creating table in Date-Base: %s", str(exc))
 
