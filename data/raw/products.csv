@@ -1,0 +1,630 @@
+ProductKey,ProductName,BrandName,ClassName,ColorName
+4,Contoso 2G MP3 Player E200 Silver,Contoso,Economy,Silver
+8,Contoso 4G MP3 Player E400 Silver,Contoso,Economy,Silver
+12,Contoso 4GB Flash MP3 Player E401 Blue,Contoso,Economy,Blue
+16,Contoso 8GB Super-Slim MP3/Video Player M800 White,Contoso,Regular,White
+20,Contoso 8GB MP3 Player new model M820 Black,Contoso,Regular,Black
+24,Contoso 16GB Mp5 Player M1600 Blue,Contoso,Regular,Blue
+28,Contoso 16GB Mp5 Player M1600 Red,Contoso,Regular,Red
+32,Contoso 32GB Video MP3 Player M3200 Pink,Contoso,Regular,Pink
+36,Contoso 4GB Portable MP3 Player M450 Yellow,Contoso,Regular,Yellow
+40,Contoso 8GB Clock & Radio MP3 Player X850 Blue,Contoso,Deluxe,Blue
+44,Contoso 16GB New Generation MP5 Player M1650 blue,Contoso,Regular,blue
+48,WWI 1GB Pulse Smart pen E50 Silver,Wide World Importers,Economy,Silver
+52,WWI 2GB Pulse Smart pen M100 Silver,Wide World Importers,Regular,Silver
+56,WWI 4GB Video Recording Pen X200 Yellow,Wide World Importers,Deluxe,Yellow
+60,WWI 1GB Digital Voice Recorder Pen E100 White,Wide World Importers,Economy,White
+64,WWI 2GB Spy Video Recorder Pen M300 Silver,Wide World Importers,Regular,Silver
+68,NT Bluetooth Stereo Headphones E52 Yellow,Northwind Traders,Economy,Yellow
+72,NT Wireless Bluetooth Stereo Headphones E102 Blue,Northwind Traders,Economy,Blue
+76,NT Bluetooth Active Headphones E202 Red,Northwind Traders,Economy,Red
+80,NT Wireless Bluetooth Stereo Headphones E302 Yellow,Northwind Traders,Economy,Yellow
+84,NT Wireless Bluetooth Stereo Headphones M402 Red,Northwind Traders,Regular,Red
+88,NT Wireless Transmitter and Bluetooth Headphones M150 Black,Northwind Traders,Regular,Black
+92,NT Wireless Transmitter and Bluetooth Headphones M150 Red,Northwind Traders,Regular,Red
+96,WWI Stereo Bluetooth Headphones E1000 White,Wide World Importers,Economy,White
+100,WWI Wireless Bluetooth Stereo Headphones M170 White,Wide World Importers,Regular,White
+104,WWI Wireless Bluetooth Stereo Headphones M270 White,Wide World Importers,Regular,White
+108,WWI Stereo Bluetooth Headphones New Generation M370 Yellow,Wide World Importers,Regular,Yellow
+112,WWI Wireless Transmitter and Bluetooth Headphones X250 Blue,Wide World Importers,Deluxe,Blue
+116,"Adventure Works 20"" CRT TV E15 Silver",Adventure Works ,Economy,Silver
+120,"Adventure Works 13"" Color TV E25 Black",Adventure Works,Economy,Black
+124,"Adventure Works 19"" Portable LCD HDTV M110 White",Adventure Works,Regular,White
+128,"Adventure Works 19"" Color Digital TV E35 Brown",Adventure Works,Economy,Brown
+132,"Adventure Works 20"" Analog CRT TV E45 Brown",Adventure Works,Economy,Brown
+136,"Adventure Works 20"" LCD HDTV M120 Brown",Adventure Works,Regular,Brown
+140,"Adventure Works 32"" LCD HDTV M130 Brown",Adventure Works,Regular,Brown
+144,"Adventure Works 15.6"" LCD TV M130W Brown",Adventure Works,Regular,Brown
+148,"Adventure Works 52"" LCD HDTV X590 Brown",Adventure Works,Deluxe,Brown
+152,"Adventure Works 40"" LCD HDTV M690 Brown",Adventure Works,Regular,Brown
+156,"Adventure Works 26"" 720p LCD HDTV M140 Brown",Adventure Works,Regular,Brown
+160,"Adventure Works 37"" 1080p LCD HDTV M150W Brown",Adventure Works,Regular,Brown
+164,"Adventure Works 52"" LCD HDTV X790W Brown",Adventure Works,Deluxe,Brown
+168,SV 16xDVD M310 Black,Southridge Video,Regular,Black
+172,SV 22xDVD X680 Black,Southridge Video,Deluxe,Black
+176,SV 16xDVD M360 Black,Southridge Video,Regular,Black
+180,SV 8xDVD E100 Silver,Southridge Video,Economy,Silver
+184,SV 16xDVD E340 Silver,Southridge Video,Economy,Silver
+188,SV 16xDVD M350 Silver,Southridge Video,Regular,Silver
+192,Litware Home Theater System 4.1 Channel M410 Black,Litware,Regular,Black
+196,Litware Home Theater System 2.1 Channel E211 Black,Litware ,Economy,Black
+200,Litware Home Theater System 4.1 Channel M413 Black,Litware,Regular,Black
+204,Litware Home Theater System 7.1 Channel X711 Black,Litware ,Deluxe,Black
+208,Litware Home Theater System 4.1 Channel M410 Silver,Litware,Regular,Silver
+212,Litware Home Theater System 2.1 Channel E211 Silver,Litware ,Economy,Silver
+216,Litware Home Theater System 4.1 Channel M413 Silver,Litware,Regular,Silver
+220,Litware Home Theater System 7.1 Channel X711 Silver,Litware ,Deluxe,Silver
+224,Litware Home Theater System 4.1 Channel M410 Brown,Litware,Regular,Brown
+228,Litware Home Theater System 2.1 Channel E211 Brown,Litware ,Economy,Brown
+232,Litware Home Theater System 4.1 Channel M413 Brown,Litware,Regular,Brown
+236,Litware Home Theater System 7.1 Channel X711 Brown,Litware ,Deluxe,Brown
+240,Contoso Home Theater System 2.1 Channel E1200 Black,Contoso,Economy,Black
+244,Contoso Home Theater System 5.1 Channel M1500 Black,Contoso,Regular,Black
+248,Contoso Home Theater System 5.1 Channel M1530 Black,Contoso,Regular,Black
+252,Contoso Home Theater System 2.1 Channel M1230 Black,Contoso,Regular,Black
+256,Contoso Home Theater System 4.1 Channel M1400 Silver,Contoso,Regular,Silver
+260,Contoso Home Theater System 5.1 Channel M1520 Silver,Contoso,Regular,Silver
+264,Contoso Home Theater System 4.1 Channel M1420 Silver,Contoso,Regular,Silver
+268,Contoso Home Theater System 7.1 Channel M1700 White,Contoso,Regular,White
+272,Contoso Home Theater System 4.1 Channel M1410 White,Contoso,Regular,White
+276,Contoso Home Theater System 5.1 Channel M1540 White,Contoso,Regular,White
+280,Contoso Home Theater System 2.1 Channel M1210 Brown,Contoso,Regular,Brown
+284,Contoso Home Theater System 5.1 Channel M1510 Brown,Contoso,Regular,Brown
+288,Contoso Home Theater System 2.1 Channel E1220 Brown,Contoso,Economy,Brown
+292,SV Car Video LCD7W M7080 Black,Southridge Video,Regular,Black
+296,SV Car Video TFT6.2W E6281 Black,Southridge Video,Economy,Black
+300,SV Car Video AM/FM E1001 Black,Southridge Video,Economy,Black
+304,SV Car Video LCD7W M7082 Black,Southridge Video,Regular,Black
+308,SV Car Video LCD7W M7080 Silver,Southridge Video,Regular,Silver
+312,SV Car Video TFT6.2W E6281 Silver,Southridge Video,Economy,Silver
+316,SV Car Video AM/FM E1001 Silver,Southridge Video,Economy,Silver
+320,SV Car Video LCD7W M7082 Silver,Southridge Video,Regular,Silver
+324,SV Car Video LCD7W M7080 Brown,Southridge Video,Regular,Brown
+328,SV Car Video TFT6.2W E6281 Brown,Southridge Video,Economy,Brown
+332,SV Car Video AM/FM E1001 Brown,Southridge Video,Economy,Brown
+336,SV Car Video LCD7W M7082 Brown,Southridge Video,Regular,Brown
+340,Fabrikam Laptop17 M7000 Black,Fabrikam,Regular,Black
+344,Fabrikam Laptop12 M2000 White,Fabrikam,Regular,White
+348,Fabrikam Laptop15.4W M5480 White,Fabrikam,Regular,White
+352,Fabrikam Laptop8.9 E0800 Silver,Fabrikam,Economy,Silver
+356,Fabrikam Laptop14.1W M4180 Red,Fabrikam,Regular,Red
+360,Fabrikam Laptop13.3 M3000 Red,Fabrikam,Regular,Red
+364,Adventure Works Laptop12 M1200 Black,Adventure Works,Regular,Black
+368,Adventure Works Laptop19W X1980 White,Adventure Works,Deluxe,White
+372,Adventure Works Laptop15.4W M1548 White,Adventure Works,Regular,White
+376,Adventure Works Laptop12 M1201 Silver,Adventure Works,Regular,Silver
+380,Adventure Works Laptop19W X1980 Red,Adventure Works,Deluxe,Red
+384,Adventure Works Laptop15.4W M1548 Red,Adventure Works,Regular,Red
+388,Adventure Works Laptop12 M1201 Blue,Adventure Works,Regular,Blue
+392,WWI Laptop12 M0120 Black,Wide World Importers,Regular,Black
+396,WWI Laptop19W X0196 White,Wide World Importers,Deluxe,White
+400,WWI Laptop15.4W M0156 White,Wide World Importers,Regular,White
+404,Proseware Laptop19 X910 Black,Proseware,Deluxe,Black
+408,Proseware Laptop15.4W M518 Black,Proseware,Regular,Black
+412,Proseware Laptop12 M210 White,Proseware,Regular,White
+416,Adventure Works Desktop PC2.33 XD233 Silver,Adventure Works,Deluxe,Silver
+420,Adventure Works Desktop PC1.80 ED182 Silver,Adventure Works,Regular,Silver
+424,Adventure Works Desktop PC1.60 ED160 Black,Adventure Works,Economy,Black
+428,Adventure Works Desktop PC2.33 XD233 Brown,Adventure Works,Deluxe,Brown
+432,Adventure Works Desktop PC1.80 ED182 Brown,Adventure Works,Regular,Brown
+436,Adventure Works Desktop PC1.80 ED180 White,Adventure Works,Regular,White
+440,WWI Desktop PC1.60 E1600 Silver,Wide World Importers,Economy,Silver
+444,WWI Desktop PC2.33 X2330 Black,Wide World Importers,Deluxe,Black
+448,WWI Desktop PC1.80 E1801 Black,Wide World Importers,Economy,Black
+452,WWI Desktop PC1.60 E1600 Red,Wide World Importers,Economy,Red
+456,WWI Desktop PC2.30 M2300 White,Wide World Importers,Regular,White
+460,WWI Desktop PC1.80 E1802 White,Wide World Importers,Economy,White
+464,Proseware LCD22W M2001 Black,Proseware,Regular,Black
+468,Proseware LCD19W M100 Black,Proseware,Regular,Black
+472,Proseware CRT19 E201 Black,Proseware,Economy,Black
+476,Proseware LCD24W X300 White,Proseware,Deluxe,White
+480,Proseware LCD20W M230 White,Proseware,Regular,White
+484,Proseware LCD17W E202 White,Proseware,Economy,White
+488,Proseware CRT15 E10 White,Proseware,Economy,White
+492,Adventure Works LCD22W M200 Black,Adventure Works,Regular,Black
+496,Adventure Works LCD19W M100 Black,Adventure Works,Regular,Black
+500,Adventure Works CRT19 E10 Black,Adventure Works,Economy,Black
+504,Adventure Works LCD24W X300 White,Adventure Works,Deluxe,White
+508,Adventure Works LCD20W M240 White,Adventure Works,Regular,White
+512,Adventure Works LCD17W E203 White,Adventure Works,Economy,White
+516,Adventure Works CRT15 E101 White,Adventure Works,Economy,White
+520,WWI LCD22W M2003 Black,Wide World Importers,Regular,Black
+524,WWI LCD19W M100 Black,Wide World Importers,Regular,Black
+528,WWI LCD24 X300 White,Wide World Importers,Deluxe,White
+532,WWI LCD20 M220 White,Wide World Importers,Regular,White
+536,WWI LCD17 E205 White,Wide World Importers,Economy,White
+540,Proseware Projector 1080p DLP86 Black,Proseware,Deluxe,Black
+544,Proseware Projector 480p DLP12 Black,Proseware,Regular,Black
+548,Proseware Screen 100in M1609 Black,Proseware,Economy,Black
+552,Proseware Projector 1080p DLP86 White,Proseware,Deluxe,White
+556,Proseware Projector 480p DLP12 White,Proseware,Regular,White
+560,Proseware Screen 100in M1609 White,Proseware,Economy,White
+564,Proseware Projector 1080p DLP86 Silver,Proseware,Deluxe,Silver
+568,Proseware Projector 480p DLP12 Silver,Proseware,Regular,Silver
+572,Proseware Screen 100in M1609 Silver,Proseware,Economy,Silver
+576,Contoso Projector 1080p X981 Black,Contoso,Deluxe,Black
+580,Contoso Projector 480p M481 Black,Contoso,Regular,Black
+584,Contoso Screen 100in E010 Black,Contoso,Economy,Black
+588,Contoso Projector 1080p X981 White,Contoso,Deluxe,White
+592,Contoso Projector 480p M481 White,Contoso,Regular,White
+596,Contoso Screen 100in E010 White,Contoso,Economy,White
+600,Contoso Projector 1080p X981 Silver,Contoso,Deluxe,Silver
+604,Contoso Projector 480p M481 Silver,Contoso,Regular,Silver
+608,Contoso Screen 100in E010 Silver,Contoso,Economy,Silver
+612,WWI Projector 1080p DLP86 Black,Wide World Importers,Deluxe,Black
+616,WWI Projector 480p DLP12 Black,Wide World Importers,Regular,Black
+620,WWI Screen 100in M1609 Black,Wide World Importers,Economy,Black
+624,WWI Projector 720p LCD56 White,Wide World Importers,Regular,White
+628,WWI Screen 125in M1611 White,Wide World Importers,Regular,White
+632,WWI Screen 85in E1010 White,Wide World Importers,Economy,White
+636,WWI Projector 720p DLP56 Silver,Wide World Importers,Regular,Silver
+640,WWI Screen 113in M1610 Silver,Wide World Importers,Regular,Silver
+644,Proseware Laser Jet Printer E100 Black,Proseware,Economy,Black
+648,Proseware Fax Machine E100 Black,Proseware,Economy,Black
+652,Proseware Scan Jet Digital Flat Bed Scanner M300 Black,Proseware,Regular,Black
+656,"Proseware Desk Jet All-in-One Printer, Scanner, Copier M350 Black",Proseware,Regular,Black
+660,"Proseware Color Ink Jet Fax, Copier, Phone M250 Black",Proseware,Regular,Black
+664,Proseware Professional Quality Plain-Paper Fax and Copier X100 Black,Proseware,Deluxe,Black
+668,Proseware Photo smart All-in-One Printer M380 Black,Proseware,Regular,Black
+672,Proseware Ink Jet All in one M300 Grey,Proseware,Regular,Grey
+676,Proseware Fax phone E100 Grey,Proseware,Economy,Grey
+680,Proseware Mobile Receipt and Document Scanner M200 Grey,Proseware,Regular,Grey
+684,Proseware Ink Jet Instant PDF Sheet-Fed Scanner M300 Grey,Proseware,Regular,Grey
+688,Proseware Laser Fax Printer M250 Grey,Proseware,Regular,Grey
+692,Proseware High-Performance Business-Class Laser Fax X200 Grey,Proseware,Deluxe,Grey
+696,Proseware Office Jet Wireless All-in-One Inkjet Printer M600 Grey,Proseware,Regular,Grey
+700,Proseware Photo Ink Jet Printer M100 White,Proseware,Regular,White
+704,Proseware Laser Jet All in one X300 White,Proseware,Regular,White
+708,Proseware Ink Jet Fax Machine E100 White,Proseware,Economy,White
+712,Proseware Ink Jet Wireless All-In-One Printer M400 White,Proseware,Regular,White
+716,Proseware High Speed Laser M2000 White,Proseware,Regular,White
+720,Proseware Slim-Design Fax Machine with Answering System X180 White,Proseware,Deluxe,White
+724,Proseware Office Jet All-in-One Printer M500 White,Proseware,Regular,White
+728,Proseware 23ppm Laser Printer with Wireless and Wired Network Interfaces M680 White,Proseware,Regular,White
+732,Proseware Ink Jet Instant PDF Sheet-Fed Scanner M300 Green,Proseware,Regular,Green
+736,Proseware Laser Fax Printer M250 Green,Proseware,Regular,Green
+740,Proseware High-Performance Business-Class Laser Fax X200 Green,Proseware,Deluxe,Green
+744,Contoso Dual USB Power Adapter - power adapter E300 Black,Contoso,Economy,Black
+748,Contoso Education Supplies Bundle E200 Black,Contoso,Economy,Black
+752,Contoso Power Inverter - DC to AC power inverter E900 Black,Contoso,Economy,Black
+756,Contoso USB 2.0 Dock Station docking station M800 Black,Contoso,Regular,Black
+760,Contoso Reserve Pen - Tablet Pen E200 Black,Contoso,Economy,Black
+764,Contoso Leather Case - case for digital photo camera X20 Black,Contoso,Deluxe,Black
+768,Contoso ADSL Modem Splitter/Filter X 1 E100 Black,Contoso,Economy,Black
+772,Contoso Cables To Go USB 2.0 Hard Drive Enclosure E920 Black,Contoso,Economy,Black
+776,Contoso Digital Camera Accessory kit M200 Blue,Contoso,Regular,Blue
+780,Contoso Car power adapter M90 White,Contoso,Regular,White
+784,Contoso Laptop Starter Bundle M200 White,Contoso,Regular,White
+788,Contoso Smart Battery M901 White,Contoso,Regular,White
+792,Contoso Enhanced Capacity Battery M800 White,Contoso,Regular,White
+796,Contoso USB Data Link - direct connect adapter E600 White,Contoso,Economy,White
+800,Contoso Lens cap E80 White,Contoso,Economy,White
+804,Contoso ADSL Modem Splitter/Filter X 2 E200 White,Contoso,Economy,White
+808,Contoso Rechargeable Battery E100 Grey,Contoso,Economy,Grey
+812,Contoso Mouse Lock Bundle E200 Grey,Contoso,Economy,Grey
+816,Contoso Desktop Alternative Bundle E200 Grey,Contoso,Economy,Grey
+820,Contoso Home/Office Laptop Power Adapter E300 Grey,Contoso,Economy,Grey
+824,Contoso 90W AC/DC Power Adapter E300 Grey,Contoso,Economy,Grey
+828,Contoso Digital camera accessory kit M200 Grey,Contoso,Regular,Grey
+832,Contoso USB Optical Mouse E200 Grey,Contoso,Economy,Grey
+836,Contoso USB Wave Multi-Media Keyboard E280 Grey,Contoso,Economy,Grey
+840,Contoso Laptop Cooling Hub notebook fan with 4 ports USB hub M200 Gold,Contoso,Regular,Gold
+844,Contoso Bright Light battery E20 Pink,Contoso,Economy,Pink
+848,Contoso Ultraportable Neoprene Sleeve E30 Yellow,Contoso,Economy,Yellow
+852,Contoso Laptop Keyboard X105 Brown,Contoso,Deluxe,Brown
+856,Contoso Multimedia Speakers M25 Black,Contoso,Regular,Black
+860,Contoso Wireless Notebook Optical Mouse M35 Blue,Contoso,Regular,Blue
+864,Contoso Optical USB Mouse M45 White,Contoso,Regular,White
+868,Contoso Wireless Laser Mouse M55 Grey,Contoso,Regular,Grey
+872,Contoso Wireless Laser Mouse E50 Silver,Contoso,Economy,Silver
+876,Contoso Wireless Notebook Optical Mouse X205 Blue,Contoso,Deluxe,Blue
+880,Contoso Optical Wheel OEM PS/2 Mouse E60 Black,Contoso,Economy,Black
+884,Contoso Bluetooth Notebook Mouse X305 White,Contoso,Deluxe,White
+888,Contoso Bluetooth Notebook Mouse E70 White,Contoso,Economy,White
+892,SV Rechargeable Bluetooth Notebook Mouse E80 Black,Southridge Video,Economy,Black
+896,SV Keyboard E90 White,Southridge Video,Economy,White
+900,SV Keyboard E10 White,Southridge Video,Economy,White
+904,SV 40GB USB2.0 Portable Hard Disk E400 Silver,Southridge Video,Economy,Silver
+908,SV 80GB USB2.0 Portable Hard Disk E500 Silver,Southridge Video,Economy,Silver
+912,SV 160GB USB2.0 Portable Hard Disk M65 Black,Southridge Video,Regular,Black
+916,SV 500GB USB 2.0 Portable External Hard Drive X405 Blue,Southridge Video,Deluxe,Blue
+920,SV USB Data Cable E600 Black,Southridge Video,Economy,Black
+924,SV USB Sync Charge Cable E700 Black,Southridge Video,Economy,Black
+928,SV 512MB Laptop memory E800 Silver,Southridge Video,Economy,Silver
+932,SV 2GB Laptop memory E800 Black,Southridge Video,Economy,Black
+936,SV 4GB Laptop Memory M65 Black,Southridge Video,Regular,Black
+940,SV Wireless LAN PCI Network Card Adapter E902 Black,Southridge Video,Economy,Black
+944,A. Datum Compact Digital Camera M200 Black,A. Datum,Economy,Black
+948,A. Datum All in One Digital Camera M200 Black,A. Datum,Regular,Black
+952,A. Datum Consumer Digital Camera M300 Black,A. Datum,Regular,Black
+956,A. Datum Point Shoot Digital Camera M500 Black,A. Datum,Regular,Black
+960,A. Datum Slim Digital Camera M180 Grey,A. Datum,Economy,Grey
+964,A. Datum Super-zoom Digital Camera X300 Grey,A. Datum,Deluxe,Grey
+968,A. Datum Bridge Digital Camera M300 Grey,A. Datum,Regular,Grey
+972,A. Datum Compact Digital Camera M200 Pink,A. Datum,Economy,Pink
+976,A. Datum All in One Digital Camera M200 Pink,A. Datum,Regular,Pink
+980,A. Datum Consumer Digital Camera M300 Pink,A. Datum,Regular,Pink
+984,A. Datum Point Shoot Digital Camera M500 Pink,A. Datum,Regular,Pink
+988,A. Datum Slim Digital Camera M180 Silver,A. Datum,Economy,Silver
+992,A. Datum Super-zoom Digital Camera X300 Silver,A. Datum,Deluxe,Silver
+996,A. Datum Bridge Digital Camera M300 Silver,A. Datum,Regular,Silver
+1000,A. Datum Compact Digital Camera M200 Orange,A. Datum,Economy,Orange
+1004,A. Datum All in One Digital Camera M200 Orange,A. Datum,Regular,Orange
+1008,A. Datum Consumer Digital Camera M300 Orange,A. Datum,Regular,Orange
+1012,A. Datum Point Shoot Digital Camera M500 Orange,A. Datum,Regular,Orange
+1016,A. Datum Slim Digital Camera M180 Green,A. Datum,Economy,Green
+1020,A. Datum Super-zoom Digital Camera X300 Green,A. Datum,Deluxe,Green
+1024,A. Datum Bridge Digital Camera M300 Green,A. Datum,Regular,Green
+1028,A. Datum Compact Digital Camera M200 Azure,A. Datum,Economy,Azure
+1032,A. Datum All in One Digital Camera M200 Azure,A. Datum,Regular,Azure
+1036,A. Datum Consumer Digital Camera M300 Azure,A. Datum,Regular,Azure
+1040,A. Datum Point n' Shoot Digital Camera M500 Azure,A. Datum,Regular,Azure
+1044,A. Datum SLR Camera X135 Black,A. Datum,Regular,Black
+1048,A. Datum SLR Camera X136 Silver,A. Datum,Regular,Silver
+1052,A. Datum SLR Camera X137 Grey,A. Datum,Regular,Grey
+1056,A. Datum SLR Camera X138 Silver Grey,A. Datum,Regular,Silver Grey
+1060,A. Datum SLR Camera X139 Gold,A. Datum,Regular,Gold
+1064,A. Datum SLR Camera X140 Pink,A. Datum,Regular,Pink
+1068,A. Datum SLR Camera X141 Blue,A. Datum,Regular,Blue
+1072,A. Datum SLR Camera X142 Orange,A. Datum,Regular,Orange
+1076,Contoso SLR Camera X142 Black,Contoso,Deluxe,Black
+1080,Contoso SLR Camera X143 Silver,Contoso,Deluxe,Silver
+1084,Contoso SLR Camera X143 Grey,Contoso,Deluxe,Grey
+1088,Contoso SLR Camera X144 Silver Grey,Contoso,Deluxe,Silver Grey
+1092,Contoso SLR Camera X144 Gold,Contoso,Deluxe,Gold
+1096,Contoso SLR Camera X145 Pink,Contoso,Deluxe,Pink
+1100,Contoso SLR Camera X145 Blue,Contoso,Deluxe,Blue
+1104,Contoso SLR Camera X146 Orange,Contoso,Regular,Orange
+1108,Fabrikam SLR Camera X146 Black,Fabrikam,Regular,Black
+1112,Fabrikam SLR Camera X147 Silver,Fabrikam,Deluxe,Silver
+1116,Fabrikam SLR Camera X147 Grey,Fabrikam,Deluxe,Grey
+1120,Fabrikam SLR Camera X148 Silver Grey,Fabrikam,Deluxe,Silver Grey
+1124,Fabrikam SLR Camera X148 Gold,Fabrikam,Deluxe,Gold
+1128,Fabrikam SLR Camera X149 Pink,Fabrikam,Regular,Pink
+1132,Fabrikam SLR Camera X149 Blue,Fabrikam,Regular,Blue
+1136,Fabrikam SLR Camera X150 Orange,Fabrikam,Regular,Orange
+1140,Fabrikam SLR Camera X150 Green,Fabrikam,Regular,Green
+1144,"Fabrikam Home and Vacation Moviemaker 1"" 25mm M400 Blue",Fabrikam  ,Regular,Blue
+1148,Fabrikam Budget Movie-Maker 1'' 25mm E400 Black,Fabrikam  ,Regular,Black
+1152,"Fabrikam Trendsetter 1"" 25mm X400 Blue",Fabrikam  ,Regular,Blue
+1156,Fabrikam Independent Filmmaker 1'' 25mm X400 Black,Fabrikam  ,Deluxe,Black
+1160,"Fabrikam Business Videographer 1"" 25mm M600 Blue",Fabrikam  ,Regular,Blue
+1164,Fabrikam Social videographer 1'' 25mm E400 Black,Fabrikam  ,Economy,Black
+1168,Fabrikam Home and Vacation Moviemaker 1'' 25mm M400 White,Fabrikam  ,Regular,White
+1172,Fabrikam Budget Moviemaker 1'' 25mm E400 White,Fabrikam  ,Regular,White
+1176,Fabrikam Trendsetter 1'' 25mm X400 White,Fabrikam  ,Regular,White
+1180,Fabrikam Independent filmmaker 1'' 25mm X400 White,Fabrikam  ,Deluxe,White
+1184,Fabrikam Business Videographer 1'' 25mm M600 White,Fabrikam  ,Regular,White
+1188,"Fabrikam Social Videographer 1"" 25mm E400 Orange",Fabrikam  ,Economy,Orange
+1192,Fabrikam Home and Vacation Moviemaker 1'' 25mm M400 Grey,Fabrikam  ,Regular,Grey
+1196,Fabrikam Budget Moviemaker 1'' 25mm E400 Grey,Fabrikam  ,Regular,Grey
+1200,Fabrikam Trendsetter 1'' 25mm X400 Grey,Fabrikam  ,Regular,Grey
+1204,Fabrikam Independent Filmmaker 1'' 25mm X400 Grey,Fabrikam  ,Deluxe,Grey
+1208,Fabrikam Business Videographer 1'' 25mm M600 Grey,Fabrikam  ,Regular,Grey
+1212,Fabrikam Social Videographer 1'' 25mm E400 Grey,Fabrikam  ,Economy,Grey
+1216,Fabrikam Home and Vacation Moviemaker 1'' 25mm M400 Black,Fabrikam,Regular,Black
+1220,Fabrikam Budget Moviemaker 1'' 25mm E400 Black,Fabrikam,Regular,Black
+1224,Fabrikam Trendsetter 1'' 25mm X400 Black,Fabrikam,Regular,Black
+1228,"Fabrikam Independent Filmmaker 1"" 25mm X400 Blue",Fabrikam,Deluxe,Blue
+1232,Fabrikam Business Videographer 1'' 25mm M600 Black,Fabrikam,Regular,Black
+1236,"Fabrikam Social Videographer 1"" 25mm E400 Blue",Fabrikam,Economy,Blue
+1240,Fabrikam Business Videographer 1/2'' 3mm M500 White,Fabrikam,Regular,White
+1244,Fabrikam Social Videographer 1/2'' 3mm E300 White,Fabrikam,Economy,White
+1248,Contoso Rechargeable Li-Ion Battery Pack E300 Black,Contoso,Economy,Black
+1252,Contoso Travel Charger for S-Series Battery E302 White,Contoso,Economy,White
+1256,Contoso General Carrying Case E304 Blue,Contoso,Economy,Blue
+1260,Contoso Multi-Use Terminal Cable E308 Silver,Contoso,Economy,Silver
+1264,Contoso Rechargeable Battery Pack E310 Black,Contoso,Economy,Black
+1268,Contoso Carrying Case E312 White,Contoso,Economy,White
+1272,Contoso Lens Cap Keeper E314 White,Contoso,Economy,White
+1276,Contoso Digital Cameras Lightweight Tripod E316 Pink,Contoso,Economy,Pink
+1280,Contoso General Soft Carrying Case E318 Silver,Contoso,Economy,Silver
+1284,Contoso Mini Battery Charger Kit E320 Black,Contoso,Economy,Black
+1288,Contoso Genuine Leather Grip Belt E322 Silver,Contoso,Economy,Silver
+1292,Contoso Macro Zoom Lens X300 Black,Contoso,Deluxe,Black
+1296,Contoso USB Cable M250 Black,Contoso,Regular,Black
+1300,Contoso Telephoto Conversion Lens M350 Black,Contoso,Regular,Black
+1304,Contoso Lens Adapter M450 White,Contoso,Regular,White
+1308,Contoso Digital Camera/Camcorder USB Cable E324 Purple,Contoso,Economy,Purple
+1312,Contoso Conversion Lens M550 Blue,Contoso,Regular,Blue
+1316,Contoso Single-line phones E10 Black,Contoso,Economy,Black
+1320,Contoso KSU-less key system M38 Black,Contoso,Regular,Black
+1324,Contoso Private Automatic Branch Exchange M65 Black,Contoso,Regular,Black
+1328,Contoso behind Centrex X15 Black,Contoso,Deluxe,Black
+1332,Contoso 2-Line Corded Cordless Telephone M202 Black,Contoso,Regular,Black
+1336,Contoso Expandable 4-Handset Cordless Phone System M206 Black,Contoso,Regular,Black
+1340,Contoso Phone with Memory Dialing-single line E88 Black,Contoso,Economy,Black
+1344,Contoso Phone for MSN E200 Black,Contoso,Economy,Black
+1348,Contoso Waterproof Accessory Handset and Charging Cradle M609 Black,Contoso,Regular,Black
+1352,Contoso Multi-line phones M30 White,Contoso,Regular,White
+1356,Contoso 4 Handset Cordless Phone System M86 White,Contoso,Regular,White
+1360,Contoso In front of Centrex L15 White,Contoso,Deluxe,White
+1364,Contoso Phone System Accessory Handset with Charger M308 White,Contoso,Regular,White
+1368,Contoso Expandable 2-Handset Cordless Phone System M205 White,Contoso,Regular,White
+1372,Contoso 2-Line Speakerphone M109 White,Contoso,Regular,White
+1376,Contoso Integrated Business Phone L08 White,Contoso,Deluxe,White
+1380,Contoso Bedroom Phone with AM/FM Stereo and Call Waiting Caller ID M600 White,Contoso,Regular,White
+1384,Contoso 3 Handset Cordless Phone System E30 Grey,Contoso,Economy,Grey
+1388,Contoso Private Branch Exchange M88 Grey,Contoso,Regular,Grey
+1392,Contoso Centrex Phone System L10 Grey,Contoso,Deluxe,Grey
+1396,Contoso Expandable Cordless Phone System M008 Grey,Contoso,Regular,Grey
+1400,Contoso Expandable 3-Handset Cordless Phone System M204 Grey,Contoso,Regular,Grey
+1404,Contoso Digital Cordless Expansion Handset Phone M900 Grey,Contoso,Regular,Grey
+1408,"The Phone Company Touch Screen Phone 1600 TFT-2.2"" L200 Black",The Phone Company,Deluxe,Black
+1412,The Phone Company Touch Screen Phones 4-Wire/On-wall M302 Black,The Phone Company,Regular,Black
+1416,The Phone Company Touch Screen Phones Capacitive M908 Black,The Phone Company,Regular,Black
+1420,The Phone Company Finger Touch Screen Phones M30 Black,The Phone Company,Economy,Black
+1424,The Phone Company Touch Screen Phones - LCD M12 Black,The Phone Company,Economy,Black
+1428,"The Phone Company Touch Screen Phones 26-1.4"" M250 Grey",The Phone Company,Regular,Grey
+1432,The Phone Company Touch Screen Phones Infrared M901 Grey,The Phone Company,Regular,Grey
+1436,The Phone Company Touch Screen Phones 5-Wire/On-wall M508 Grey,The Phone Company,Regular,Grey
+1440,The Phone Company Touch Screen Phones - CRT M11 Grey,The Phone Company,Economy,Grey
+1444,"The Phone Company Touch Screen Phones 26-2.2"" M200 Gold",The Phone Company,Regular,Gold
+1448,The Phone Company Touch Screen Phones 5-Wire/Built-in M500 Gold,The Phone Company,Regular,Gold
+1452,The Phone Company Touch Screen Phones SAW/On-wall M806 Gold,The Phone Company,Regular,Gold
+1456,The Phone Company Sharp Touch Screen Phones M910 Gold,The Phone Company,Regular,Gold
+1460,Contoso Touch Screen Phones Infrared M901 Black,Contoso,Regular,Black
+1464,Contoso Touch Screen Phones 5-Wire/On-wall M508 Black,Contoso,Regular,Black
+1468,Contoso Touch Screen Phones - CRT M11 Black,Contoso,Economy,Black
+1472,The Phone Company Smart phones 4 GB of Memory M300 Black,The Phone Company,Regular,Black
+1476,The Phone Company Smart phones -320 x 320 M86 Black,The Phone Company,Regular,Black
+1480,The Phone Company Smart phones without camera E100 Grey,The Phone Company,Economy,Grey
+1484,The Phone Company Smart phones 160x160 M26 Grey,The Phone Company,Regular,Grey
+1488,The Phone Company Smart phones Expert M400 Grey,The Phone Company,Regular,Grey
+1492,The Phone Company Smart phones 4 GB of Memory M300 White,The Phone Company,Regular,White
+1496,The Phone Company Smart phones 320 x 320 M86 White,The Phone Company,Regular,White
+1500,The Phone Company Smart phones without camera E100 Pink,The Phone Company,Economy,Pink
+1504,The Phone Company Smart phones 160x160 M26 Pink,The Phone Company,Regular,Pink
+1508,The Phone Company Smart phones Expert M400 Pink,The Phone Company,Regular,Pink
+1512,The Phone Company Smart phones 4 GB of Memory M300 Gold,The Phone Company,Regular,Gold
+1516,The Phone Company Smart phones 320 x 320 M86 Gold,The Phone Company,Regular,Gold
+1520,The Phone Company PDA Wifi 3.5-inch M200 Black,The Phone Company,Regular,Black
+1524,The Phone Company PDA Phone 3.7 inches M340 Black,The Phone Company,Deluxe,Black
+1528,The Phone Company PDA Phone Unlocked 4.7 inches L550 Black,The Phone Company,Deluxe,Black
+1532,The Phone Company PDA Palm 3.5 inch M810 Black,The Phone Company,Regular,Black
+1536,The Phone Company PDA GPS Phone 3.7 inch M930 Black,The Phone Company,Regular,Black
+1540,The Phone Company PDA Wifi 4.7-inch L290 Silver,The Phone Company,Deluxe,Silver
+1544,The Phone Company PDA Phone Unlocked 3.7 inches M510 Silver,The Phone Company,Regular,Silver
+1548,The Phone Company PDA Handheld 3.7 inch M630 Silver,The Phone Company,Regular,Silver
+1552,The Phone Company PDA Palm 4.7 inch L850 Silver,The Phone Company,Deluxe,Silver
+1556,The Phone Company PDA Wifi 3.5-inch M200 White,The Phone Company,Regular,White
+1560,The Phone Company PDA Phone 3.7 inches M340 White,The Phone Company,Deluxe,White
+1564,The Phone Company PDA Phone Unlocked 4.7 inches L550 White,The Phone Company,Deluxe,White
+1568,The Phone Company PDA Palm 3.5 inch M810 White,The Phone Company,Regular,White
+2489,Contoso Rubberized Skin BlackBerry E100 Silver,Contoso,Economy,Silver
+2493,Cigarette Lighter Adapter for Contoso Phones E110 Red,Contoso,Economy,Red
+2497,Headphone Adapter for Contoso Phone E130 White,Contoso,Economy,White
+2501,Contoso Phone Tough Skin Case E140 Pink,Contoso,Economy,Pink
+2505,Contoso Touch Stylus Pen E150 Red,Contoso,Economy,Red
+2509,Contoso Original K1m Li-Ion Standard Battery E170 Black,Contoso,Economy,Black
+2513,Contoso Bluetooth Active Headphones L15 Red,Contoso,Deluxe,Red
+2517,Contoso In-Line Coupler E180 Silver,Contoso,Economy,Silver
+1574,SV DVD Player M130 Grey,Southridge Video,Regular,Grey
+1578,SV DVD Recorder L210 Silver,Southridge Video,Deluxe,Silver
+1582,SV DVD 48 DVD Storage Binder M50 Black,Southridge Video,Regular,Black
+1586,SV DVD 55DVD Storage Binder M56 Black,Southridge Video,Regular,Black
+1590,SV DVD 60 DVD Storage Binder L20 Silver,Southridge Video,Deluxe,Silver
+1594,SV DVD 38 DVD Storage Binder E25 Red,Southridge Video,Economy,Red
+1598,SV DVD External DVD Burner M200 Grey,Southridge Video,Regular,Grey
+1602,SV DVD 12-Inch Player Portable M400 Black,Southridge Video,Regular,Black
+1606,SV DVD 9-Inch Player Portable M300 Silver,Southridge Video,Regular,Silver
+1610,SV DVD 15-Inch Player Portable L200 Silver,Southridge Video,Deluxe,Silver
+1614,SV DVD 14-Inch Player Portable L100 White,Southridge Video,Deluxe,White
+1618,Contoso DVD Player M120 White,Contoso,Regular,White
+1622,Contoso DVD Recorder L200 Black,Contoso,Deluxe,Black
+1626,Contoso DVD Recorder L240 Gold,Contoso,Deluxe,Gold
+1630,Contoso DVD 60 DVD Storage Binder L20 Black,Contoso,Deluxe,Black
+1634,Contoso DVD 38 DVD Storage Binder E25 Silver,Contoso,Economy,Silver
+1638,Contoso DVD 58 DVD Storage Binder M55 Red,Contoso,Regular,Red
+1642,Contoso DVD External DVD Burner M200 Black,Contoso,Regular,Black
+1646,Contoso DVD 9-Inch Player Portable M300 Black,Contoso,Regular,Black
+1650,Contoso DVD 15-Inch Player Portable L200 Black,Contoso,Deluxe,Black
+1654,Contoso DVD 14-Inch Player Portable L100 Silver,Contoso,Deluxe,Silver
+1658,Contoso DVD 7-Inch Player Portable E200 White,Contoso,Economy,White
+1662,MGS Hand Games for students E400 Yellow,Tailspin Toys,Economy,Yellow
+1666,MGS Hand Games for Office worker L299 Yellow,Tailspin Toys,Deluxe,Yellow
+1670,MGS Hand Games women M400 Black,Tailspin Toys,Regular,Black
+1674,MGS Hand Games for students E400 Red,Tailspin Toys,Economy,Red
+1678,MGS Hand Games for Office worker L299 Red,Tailspin Toys,Deluxe,Red
+1682,MGS Hand Games women M400 Silver,Tailspin Toys,Regular,Silver
+1686,SV Hand Games for students E40 Yellow,Southridge Video,Economy,Yellow
+1690,SV Hand Games for Office worker L28 Yellow,Southridge Video,Deluxe,Yellow
+1694,SV Hand Games women M40 Black,Southridge Video,Regular,Black
+1698,SV Hand Games for students E40 Red,Southridge Video,Economy,Red
+1702,SV Hand Games for Office worker L28 Red,Southridge Video,Deluxe,Red
+1706,SV Hand Games women M40 Silver,Southridge Video,Regular,Silver
+1710,MGS Age of Empires III: The Asian Dynasties M180,Tailspin Toys,Regular,Silver
+1714,MGS Halo 2 for Windows Vista M220,Tailspin Toys,Regular,White
+1718,MGS Zoo Tycoon 2: Zookeeper Collection M260,Tailspin Toys,Regular,Blue
+1722,MGS Zoo Tycoon 2: End range Species Expansion Pack E105,Tailspin Toys,Economy,Silver
+1726,MGS Zoo Tycoon 2 E108,Tailspin Toys,Economy,Silver
+1730,MGS Dungeon Siege: Legends of Aranna M330,Tailspin Toys,Regular,Blue
+1734,MGS Zoo Tycoon Complete Collection E110,Tailspin Toys,Economy,Blue
+1738,MGS Impossible Creatures E114,Tailspin Toys,Economy,Blue
+1742,MGS Age of Mythology E118,Tailspin Toys,Economy,Pink
+1746,MGS Zoo Tycoon Dinosaur Digs X200,Tailspin Toys,Deluxe,Black
+1750,MGS Bicycle Card Games X600,Tailspin Toys,Deluxe,White
+1754,MGS Zoo Tycoon M380,Tailspin Toys,Regular,Blue
+1758,MGS Train Simulator E124,Tailspin Toys,Economy,White
+1762,MGS Age of Empires II: The Conquerors Expansion E125,Tailspin Toys,Economy,Black
+1766,MGS Age of Empires 2008new M420,Tailspin Toys,Regular,Black
+1770,MGS Age of Empires III: The Asian Dynasties 2008 E126,Tailspin Toys,Economy,White
+1774,MGS Halo 2 for Windows Vista 2009 E130,Tailspin Toys,Economy,Silver
+1778,MGS Zoo Tycoon 2: Zookeeper Collection 2008 E134,Tailspin Toys,Economy,Pink
+1782,MGS Zoo Tycoon 2: End Range Species Expansion Pack 2008 E138,Tailspin Toys,Economy,Silver
+1786,MGS Zoo Tycoon 2008 E142,Tailspin Toys,Economy,Pink
+1790,MGS Dungeon Siege: Legends of Aranna 2009 E146,Tailspin Toys,Economy,Silver
+1794,MGS Zoo Tycoon Complete Collection2009 E150,Tailspin Toys,Economy,Silver
+1798,MGS Impossible Creatures2009 E154,Tailspin Toys,Economy,Black
+1802,MGS Age of Mythology 2009 E158,Tailspin Toys,Economy,White
+1806,MGS Zoo Tycoon Dinosaur Digs2009 E162,Tailspin Toys,Economy,Blue
+1810,MGS Bicycle Card Games2009 E166,Tailspin Toys,Economy,Blue
+1814,MGS Zoo Tycoon2009 E170,Tailspin Toys,Economy,Blue
+1818,MGS Train Simulator 2009 E174,Tailspin Toys,Economy,Blue
+1822,MGS Age of Empires II: The Conquerors Expansion 2009 E178,Tailspin Toys,Economy,Blue
+1826,"MGS Age of Empires, 2009 E182",Tailspin Toys,Economy,Blue
+1830,Litware Washer & Dryer 21in E214 White,Litware,Regular,White
+1834,Litware Washer & Dryer 24in M260 Silver,Litware,Regular,Silver
+1838,Litware Washer & Dryer 25.5in M350 Blue,Litware,Regular,Blue
+1842,Litware Washer & Dryer 27in L420 Green,Litware,Deluxe,Green
+1846,Litware Washer & Dryer 15.5in E150 Green,Litware,Economy,Green
+1850,NT Washer & Dryer 21in E2100 White,Northwind Traders,Regular,White
+1854,NT Washer & Dryer 24in M2400 Silver,Northwind Traders,Regular,Silver
+1858,NT Washer & Dryer 25.5in M2550 Blue,Northwind Traders,Regular,Blue
+1862,NT Washer & Dryer 27in L2700 Green,Northwind Traders,Deluxe,Green
+1866,NT Washer & Dryer 15.5in E1550 Green,Northwind Traders,Economy,Green
+1870,Contoso Washer & Dryer 21in E210 White,Contoso,Regular,White
+1874,Contoso Washer & Dryer 24in M240 Silver,Contoso,Regular,Silver
+1878,Contoso Washer & Dryer 25.5in M255 Blue,Contoso,Regular,Blue
+1882,Contoso Washer & Dryer 27in L270 Green,Contoso,Deluxe,Green
+1886,Contoso Washer & Dryer 15.5in E155 Green,Contoso,Economy,Green
+1890,Contoso Washer & Dryer 21in E210 Red,Contoso,Regular,Red
+1894,Contoso Washer & Dryer 24in M240 Pink,Contoso,Regular,Pink
+1898,Fabrikam Refrigerator 19CuFt M7600 White,Fabrikam,Regular,White
+1902,Fabrikam Refrigerator 1.7CuFt E1200 White,Fabrikam,Economy,White
+1906,Fabrikam Refrigerator 4.6CuFt E2800 Brown,Fabrikam,Regular,Brown
+1910,Fabrikam Refrigerator 19CuFt M7600 Silver,Fabrikam,Regular,Silver
+1914,Fabrikam Refrigerator 1.7CuFt E1200 Silver,Fabrikam,Economy,Silver
+1918,Fabrikam Refrigerator 4.6CuFt E2800 Green,Fabrikam,Regular,Green
+1922,Fabrikam Refrigerator 19CuFt M7600 Blue,Fabrikam,Regular,Blue
+1926,Fabrikam Refrigerator 1.7CuFt E1200 Blue,Fabrikam,Economy,Blue
+1930,Fabrikam Refrigerator 4.6CuFt E2800 Grey,Fabrikam,Regular,Grey
+1934,Fabrikam Refrigerator 19CuFt M7600 Orange,Fabrikam,Regular,Orange
+1938,Fabrikam Refrigerator 1.7CuFt E1200 Orange,Fabrikam,Economy,Orange
+1942,Litware Refrigerator 4.6CuFt E280 White,Litware,Regular,White
+1946,Litware Refrigerator 19CuFt M760 Brown,Litware,Regular,Brown
+1950,Litware Refrigerator 1.7CuFt E120 Brown,Litware,Economy,Brown
+1954,Litware Refrigerator 4.6CuFt E280 Silver,Litware,Regular,Silver
+1958,Litware Refrigerator 19CuFt M760 Green,Litware,Regular,Green
+1962,Litware Refrigerator 1.7CuFt E120 Green,Litware,Economy,Green
+1966,Litware Refrigerator 4.6CuFt E280 Blue,Litware,Regular,Blue
+1970,Litware Refrigerator 19CuFt M760 Grey,Litware,Regular,Grey
+1974,Litware Refrigerator 1.7CuFt E120 Grey,Litware,Economy,Grey
+1978,Litware Refrigerator 4.6CuFt E280 Orange,Litware,Regular,Orange
+1982,Litware Refrigerator 9.7CuFt M560 Red,Litware,Regular,Red
+1986,Fabrikam Microwave 1.0CuFt E1100 White,Fabrikam,Regular,White
+1990,Fabrikam Microwave 2.2CuFt M1250 Silver,Fabrikam,Regular,Silver
+1994,Fabrikam Microwave 0.8CuFt E0800 Silver,Fabrikam,Economy,Silver
+1998,Fabrikam Microwave 1.0CuFt E1100 Grey,Fabrikam,Regular,Grey
+2002,Fabrikam Microwave 2.2CuFt M1250 Red,Fabrikam,Regular,Red
+2006,Fabrikam Microwave 0.8CuFt E0800 Red,Fabrikam,Economy,Red
+2010,Fabrikam Microwave 1.0CuFt E1100 Black,Fabrikam,Regular,Black
+2014,Fabrikam Microwave 2.2CuFt M1250 Blue,Fabrikam,Regular,Blue
+2018,Fabrikam Microwave 0.8CuFt E0800 Blue,Fabrikam,Economy,Blue
+2022,Litware Microwave 1.0CuFt E110 White,Litware,Regular,White
+2026,Litware Microwave 2.2CuFt M125 Silver,Litware,Regular,Silver
+2030,Litware Microwave 0.8CuFt E080 Silver,Litware,Economy,Silver
+2034,Litware Microwave 1.0CuFt E110 Grey,Litware,Regular,Grey
+2038,Litware Microwave 2.2CuFt M125 Red,Litware,Regular,Red
+2042,Litware Microwave 0.8CuFt E080 Red,Litware,Economy,Red
+2046,Litware Microwave 1.0CuFt E110 Black,Litware,Regular,Black
+2050,Litware Microwave 2.2CuFt M125 Blue,Litware,Regular,Blue
+2054,Litware Microwave 0.8CuFt E080 Blue,Litware,Economy,Blue
+2058,Contoso Microwave 1.0CuFt E0110 White,Contoso,Regular,White
+2062,Contoso Microwave 2.2CuFt M0125 Silver,Contoso,Regular,Silver
+2066,Contoso Microwave 0.8CuFt E0080 Silver,Contoso,Economy,Silver
+2070,Contoso Microwave 1.0CuFt E0110 Grey,Contoso,Regular,Grey
+2074,Contoso Microwave 2.2CuFt M0125 Red,Contoso,Regular,Red
+2078,Contoso Microwave 0.8CuFt E0080 Red,Contoso,Economy,Red
+2082,Contoso Microwave 1.0CuFt E0110 Black,Contoso,Regular,Black
+2086,Contoso Water Heater 4.3GPM M1250 White,Contoso ,Regular,White
+2090,Contoso Water Heater 7.2GPM X1800 Blue,Contoso ,Deluxe,Blue
+2094,Contoso Water Heater 1.5GPM E0800 Blue,Contoso ,Economy,Blue
+2098,Contoso Water Heater 2.6GPM E0900 Green,Contoso ,Regular,Green
+2102,Contoso Water Heater 4.0GPM M1250 Silver,Contoso ,Regular,Silver
+2106,Contoso Water Heater 4.3GPM M1250 Grey,Contoso ,Regular,Grey
+2110,Contoso Water Heater 7.2GPM X1800 Red,Contoso ,Deluxe,Red
+2114,Contoso Water Heater 1.5GPM E0800 Red,Contoso ,Economy,Red
+2118,Contoso Coffee Maker 12C M1000 Black,Contoso,Regular,Black
+2122,Contoso Coffee Maker Super-Auto 12C X1250 Silver,Contoso,Deluxe,Silver
+2126,Contoso Coffee Maker 5C E0900 Silver,Contoso,Economy,Silver
+2130,Contoso Coffee Maker 12C M1000 White,Contoso,Regular,White
+2134,Contoso Coffee Maker Super-Auto 12C X1250 Grey,Contoso,Deluxe,Grey
+2138,Contoso Coffee Maker 5C E0900 Grey,Contoso,Economy,Grey
+2142,Adventure Works Coffee Maker 12C M100 Black,Adventure Works,Regular,Black
+2146,Adventure Works Coffee Maker Super-Auto 12C X125 Silver,Adventure Works,Deluxe,Silver
+2150,Adventure Works Coffee Maker 5C E090 Silver,Adventure Works,Economy,Silver
+2154,Adventure Works Coffee Maker 12C M100 White,Adventure Works,Regular,White
+2158,Adventure Works Coffee Maker Super-Auto 12C X125 Grey,Adventure Works,Deluxe,Grey
+2162,Adventure Works Coffee Maker 5C E090 Grey,Adventure Works,Economy,Grey
+2166,Fabrikam Coffee Maker 12C M100 Black,Fabrikam,Regular,Black
+2170,Fabrikam Coffee Maker Super-Auto 12C X125 Silver,Fabrikam,Deluxe,Silver
+2174,Fabrikam Coffee Maker 5C E090 Silver,Fabrikam,Economy,Silver
+2178,Fabrikam Coffee Maker 12C M100 White,Fabrikam,Regular,White
+2182,Fabrikam Coffee Maker Super-Auto 12C X125 Grey,Fabrikam,Deluxe,Grey
+2186,Fabrikam Coffee Maker 5C E090 Grey,Fabrikam,Economy,Grey
+2190,Adventure Works Floor Lamp X1150 Black,Adventure Works,Deluxe,Black
+2194,Adventure Works Wall Lamp E2150 Black,Adventure Works,Economy,Black
+2198,Adventure Works Floor Lamp X1150 White,Adventure Works,Deluxe,White
+2202,Adventure Works Wall Lamp E2150 White,Adventure Works,Economy,White
+2206,Adventure Works Floor Lamp X1150 Silver,Adventure Works,Deluxe,Silver
+2210,Adventure Works Wall Lamp E2150 Silver,Adventure Works,Economy,Silver
+2214,Adventure Works Floor Lamp X1150 Grey,Adventure Works,Deluxe,Grey
+2218,Adventure Works Wall Lamp E2150 Grey,Adventure Works,Economy,Grey
+2222,Adventure Works Floor Lamp X1150 Blue,Adventure Works,Deluxe,Blue
+2226,Adventure Works Wall Lamp E2150 Blue,Adventure Works,Economy,Blue
+2230,WWI Floor Lamp X115 Black,Wide World Importers,Deluxe,Black
+2234,WWI Wall Lamp E215 Black,Wide World Importers,Economy,Black
+2238,WWI Floor Lamp X115 White,Wide World Importers,Deluxe,White
+2242,WWI Wall Lamp E215 White,Wide World Importers,Economy,White
+2246,WWI Floor Lamp X115 Silver,Wide World Importers,Deluxe,Silver
+2250,WWI Wall Lamp E215 Silver,Wide World Importers,Economy,Silver
+2254,WWI Floor Lamp X115 Grey,Wide World Importers,Deluxe,Grey
+2258,WWI Wall Lamp E215 Grey,Wide World Importers,Economy,Grey
+2262,WWI Floor Lamp X115 Blue,Wide World Importers,Deluxe,Blue
+2266,WWI Wall Lamp E215 Blue,Wide World Importers,Economy,Blue
+2270,Proseware Floor Lamp X0115 Black,Proseware,Deluxe,Black
+2274,Proseware Wall Lamp E0215 Black,Proseware,Economy,Black
+2278,Proseware Floor Lamp X0115 White,Proseware,Deluxe,White
+2282,Proseware Wall Lamp E0215 White,Proseware,Economy,White
+2286,Proseware Floor Lamp X0115 Silver,Proseware,Deluxe,Silver
+2290,Proseware Wall Lamp E0215 Silver,Proseware,Economy,Silver
+2294,Proseware Floor Lamp X0115 Grey,Proseware,Deluxe,Grey
+2298,Proseware Wall Lamp E0215 Grey,Proseware,Economy,Grey
+2302,Proseware Floor Lamp X0115 Blue,Proseware,Deluxe,Blue
+2306,Proseware Wall Lamp E0215 Blue,Proseware,Economy,Blue
+2310,Litware Floor Lamp X1015 Black,Litware,Deluxe,Black
+2314,Litware Wall Lamp E2015 Black,Litware,Economy,Black
+2318,Litware Floor Lamp X1015 White,Litware,Deluxe,White
+2322,Litware Wall Lamp E2015 White,Litware,Economy,White
+2326,Litware Floor Lamp X1015 Silver,Litware,Deluxe,Silver
+2330,Litware Wall Lamp E2015 Silver,Litware,Economy,Silver
+2334,Litware Floor Lamp X1015 Grey,Litware,Deluxe,Grey
+2338,Litware Wall Lamp E2015 Grey,Litware,Economy,Grey
+2342,Litware Floor Lamp X1015 Blue,Litware,Deluxe,Blue
+2346,Litware Wall Lamp E2015 Blue,Litware,Economy,Blue
+2350,Contoso Air conditioner 10000BTU M0490 White,Contoso ,Regular,White
+2354,Contoso Air conditioner 5200BTU E0100 White,Contoso ,Economy,White
+2358,Contoso Air conditioner 8000BTU M0320 Red,Contoso ,Regular,Red
+2362,Contoso Air conditioner 25000BTU L1672 Silver,Contoso ,Deluxe,Silver
+2366,Contoso Air conditioner 7000BTU E0260 Silver,Contoso ,Regular,Silver
+2370,Contoso Air conditioner 12000BTU M0640 Grey,Contoso ,Regular,Grey
+2374,Contoso Air conditioner 6000BTU E0180 Grey,Contoso ,Economy,Grey
+2378,Contoso Air conditioner 10000BTU M0490 Blue,Contoso ,Regular,Blue
+2382,Contoso Air conditioner 5200BTU E0100 Blue,Contoso ,Economy,Blue
+2386,Proseware Air conditioner 8000BTU M320 White,Proseware,Regular,White
+2390,Proseware Air conditioner 25000BTU L167 Red,Proseware,Deluxe,Red
+2394,Proseware Air conditioner 7000BTU E260 Red,Proseware,Regular,Red
+2398,Proseware Air conditioner 12000BTU M640 Silver,Proseware,Regular,Silver
+2402,Proseware Air conditioner 6000BTU E180 Silver,Proseware,Economy,Silver
+2406,Proseware Air conditioner 10000BTU M490 Grey,Proseware,Regular,Grey
+2410,Litware 3-Speed Oscillating High-Performance Fan E201 Black,Litware,Economy,Black
+2414,Litware 18'' Adjustable Oscillating Pedestal Fan E301 White,Litware,Economy,White
+2418,Litware 3-Speed Oscillating Blower Fan M115 Silver,Litware,Economy,Silver
+2422,Litware 20'' Box Fan E401 Yellow,Litware,Economy,Yellow
+2426,Litware Tower Fan E501 Silver,Litware,Economy,Silver
+2430,Litware Mobile Fan External USB Cooling Fan E601 Black,Litware,Economy,Black
+2434,"Litware 16"" White Oscillating Stand Fan E701 Grey",Litware,Economy,Grey
+2438,"Litware 14"" High Velocity Floor Fan E801 Pink",Litware,Economy,Pink
+2442,Litware 120mm Blue LED Case Fan E901 Grey,Litware,Economy,Grey
+2446,Litware 80mm Dual Ball Bearing Case Fan E1001 Pink,Litware,Economy,Pink
+2450,Litware 92mm DBB Case Fan E1101 Grey,Litware,Economy,Grey
+2454,Litware Desktop Wind Tower Oscillating Fan E1201 White,Litware,Economy,White
+2458,Litware USB Foam Fan E1301 Red,Litware,Economy,Red
+2462,Litware 180 CFM Vertical Discharge Fan X450 Blue,Litware,Regular,Blue
+2466,Litware USB Durable Desk Soft Fan E1401 Red,Litware,Economy,Red
+2470,Litware 80mm LED Dual PCI Slot Fan E1501 Pink,Litware,Economy,Pink
+2474,Litware 20'' Weather-Shield Performance Box Fan E1601 White,Litware,Economy,White
+2478,Litware 17'' Oscillating Pedestal Fan M125 Blue,Litware,Regular,Blue
+2482,Litware 18'' Oscillating Pedestal Fan M135 Blue,Litware,Deluxe,Blue
+2486,Litware 18'' Oscillating Pedestal Fan M145 Blue,Litware,Deluxe,Blue

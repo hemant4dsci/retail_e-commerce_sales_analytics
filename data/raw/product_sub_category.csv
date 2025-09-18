@@ -1,0 +1,45 @@
+﻿ProductSubcategoryKey,ProductSubcategoryName,products_category_name
+1,MP4&MP3,Audio
+2,Recorder,Audio
+3,Radio,Audio
+4,Recording Pen,Audio
+5,Headphones,Audio
+6,Bluetooth Headphones,Audio
+7,Speakers,Audio
+8,Audio Accessories,Audio
+9,Televisions,TV and Video
+10,VCD & DVD,TV and Video
+11,Home Theater System,TV and Video
+13,Car Video,TV and Video
+14,TV & Video Accessories,TV and Video
+15,Laptops,Computers
+16,Netbooks,Computers
+17,Desktops,Computers
+18,Monitors,Computers
+19,Projectors & Screens,Computers
+20,"Printers, Scanners & Fax",Computers
+21,Computer Setup & Service,Computers
+22,Computers Accessories,Computers
+23,Digital Cameras,Cameras and Camecorders
+24,Digital SLR Cameras,Cameras and Camecorders
+25,Film Cameras,Cameras and Camecorders
+27,Camcorders,Cameras and Camecorders
+28,Cameras & Camcorders Accessories,Cameras and Camecorders
+29,Home & Office Phones,Cell Phones
+31,Touch Screen Phones ,Cell Phones
+32,Smart phones & PDAs ,Cell Phones
+33,Cell phones Accessories,Cell Phones
+34,Music CD,"Music, Movies and Audio Books"
+35,Movie DVD,"Music, Movies and Audio Books"
+36,Audio Books,"Music, Movies and Audio Books"
+38,Boxed Games,Games and Toys
+39,Download Games,Games and Toys
+40,Games Accessories,Games and Toys
+41,Washers & Dryers,Home Appliances
+42,Refrigerators,Home Appliances
+43,Microwaves,Home Appliances
+44,Water Heaters,Home Appliances
+45,Coffee Machines,Home Appliances
+46,Lamps,Home Appliances
+47,Air Conditioners,Home Appliances
+48,Fans,Home Appliances
