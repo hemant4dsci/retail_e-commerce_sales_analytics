@@ -32,6 +32,7 @@ data_analytics_project_template/
 │
 ├─ sql/                     # 💾 All reusable SQL queries
 │
+├─ .gitattributes           # track large data uploaded using LFS
 ├─ .gitignore               # Ignore data, logs, venv, credentials
 ├─ LICENCE                  # Open-source license
 ├─ README.md                # Project overview + instructions
