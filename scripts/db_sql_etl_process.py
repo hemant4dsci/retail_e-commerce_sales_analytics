@@ -4,7 +4,7 @@ from sqlalchemy import Column, INTEGER, NUMERIC, VARCHAR, DATE
 from sqlalchemy.orm import declarative_base
 
 logging.basicConfig(
-    filename="../configs/project_logger.log",
+    filename="../logs/project_logger.log",
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
     filemode="w",
