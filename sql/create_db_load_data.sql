@@ -1,12 +1,15 @@
 -- Execute below queries step by step to create database and then table.
 
 -- Creating database
+
 CREATE DATABASE IF NOT EXISTS walmart_sales;
 
 -- Choosing the database
+
 USE walmart_sales;
 
 -- Creating calender table
+
 CREATE TABLE calender (
     dates DATE PRIMARY KEY,
     years YEAR,
@@ -21,7 +24,8 @@ CREATE TABLE calender (
 );
 
 -- Insert data in calender table
-LOAD DATA INFILE '../data/raw/calender.csv'
+
+LOAD DATA INFILE '../data/raw/calender.csv' -- path of your file
 INTO TABLE calender
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -29,14 +33,17 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 
+
 -- Creating channel table
+
 CREATE TABLE channels (
     channel_key INTEGER PRIMARY KEY,
     channel_name VARCHAR(255)
 );
 
 -- Insert data in channel table
-LOAD DATA INFILE '../data/raw/channel.csv'
+
+LOAD DATA INFILE '../data/raw/channel.csv' -- path of your file
 INTO TABLE channels
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
@@ -44,7 +51,9 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 
+
 -- Creating geography table
+
 CREATE TABLE geography (
     geo_key INTEGER PRIMARY KEY,
     continent_name VARCHAR(255),
@@ -54,12 +63,14 @@ CREATE TABLE geography (
 );
 
 -- Insert data in geography table
-LOAD DATA INFILE '../data/raw/geography.csv'
+
+LOAD DATA INFILE '../data/raw/geography.csv' -- path of your file
 INTO TABLE geography
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+
 
 
 -- Creating product sub category table
@@ -70,12 +81,13 @@ CREATE TABLE product_sub_category (
 );
 
 -- Insert data in geography table
-LOAD DATA INFILE '../data/raw/product_sub_category.csv'
+LOAD DATA INFILE '../data/raw/product_sub_category.csv' -- path of your file
 INTO TABLE product_sub_category
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+
 
 
 -- Creating products table
@@ -88,12 +100,13 @@ CREATE TABLE products (
 );
 
 -- Insert data in geography table
-LOAD DATA INFILE '../data/raw/products.csv'
+LOAD DATA INFILE '../data/raw/products.csv' -- path of your file
 INTO TABLE products
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+
 
 
 -- Creating sales table
@@ -115,7 +128,7 @@ CREATE TABLE sales (
 );
 
 -- Insert data in geography table
-LOAD DATA INFILE '../data/raw/sales.csv'
+LOAD DATA INFILE '../data/raw/sales.csv' -- path of your file
 INTO TABLE sales
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
