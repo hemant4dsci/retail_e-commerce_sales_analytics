@@ -231,7 +231,7 @@ The analysis provides a comprehensive understanding of sales, profitability, and
 
 > For full detailed analysis and visualizations, refer to `reports/summary_reports/main_report.pdf`.
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 walmart_sales_analysis/
@@ -300,6 +300,6 @@ This project is licensed under the MIT License.
 
 Hi, I'm Hemant, a data enthusiast passionate about turning raw data into meaningful business insights.
 
-📫 **Let’s connect:**
+**Let’s connect:**
 - LinkedIn : [LinkedIn Profile](https://www.linkedin.com/in/hemant1491/)  
 - Email : hemant4dsci@gmail.com
