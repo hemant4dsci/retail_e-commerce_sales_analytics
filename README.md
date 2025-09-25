@@ -68,7 +68,7 @@ The project aims to:
 + Figures
     - `reports/figures/` – Plots and visualizations, e.g., correlation plots, profit analysis, distributions
 + Summary Reports
-    - `reports/summary_reports/main_report.pdf` – Detailed analysis report
+    - `reports/summary_reports/walmart_sales_analytics_report.pdf` – Detailed analysis report
 
 ## Tools and Technologies
 
@@ -185,10 +185,12 @@ The project workflow is organized into the following steps:
 + Dashboard
     + Use Power BI dashboard (`reports/dashboards/walmart_sales_analysis_dashboard.pbix`) to visualize insights.  
     + Covers sales trends, profitability, country-level performance, and channel comparisons.
+
+    ![Dashboard Preview](reports/figures/dashboard_preview.png)
    
 ### 5. Reporting 
 
-- The final report, including all visuals and detailed analysis, is documented in `reports/summary_reports/main_report.pdf`.  
+- The final report, including all visuals and detailed analysis, is documented in `reports/summary_reports/walmart_sales_analytics_report.pdf`.  
 - Visuals and plots are included to support insights and recommendations.
 
 ## Analysis Summary & Key Insights
@@ -229,7 +231,7 @@ The analysis provides a comprehensive understanding of sales, profitability, and
   - Channel performance and product/category contributions.  
   - Impact of discounts and returns on profitability over time.
 
-> For full detailed analysis and visualizations, refer to `reports/summary_reports/main_report.pdf`.
+> For full detailed analysis and visualizations, refer to `reports/summary_reports/walmart_sales_analytics_report.pdf`.
 
 ## Project Structure
 
@@ -257,7 +259,9 @@ walmart_sales_analysis/
 │  ├─ dashboards/                           # Power BI dashboards
 │  │  └─ walmart_sales_analysis_dashboard.pbix
 │  ├─ figures/                              # Visualizations & plots
+│  │  ├─ after_etl_db_table_relation.png                         
 │  │  ├─ correlation_plot.png
+│  │  ├─ dashboard_preview.png
 │  │  ├─ discount_return_impact_profit.png
 │  │  ├─ distribution_numeric_column.png
 │  │  ├─ frequent_category.png
@@ -270,7 +274,7 @@ walmart_sales_analysis/
 │  │  ├─ sales_profit_discount_returns_product_category.png
 │  │  └─ summary_stats.png
 │  └─ summary_reports/          # PDF reports
-│     └─ main_report.pdf
+│     └─ walmart_sales_analytics_report.pdf
 │
 ├─ scripts/                     # Python scripts
 │  └─ db_sql_etl_process.py                 # SQL ETL pipeline
