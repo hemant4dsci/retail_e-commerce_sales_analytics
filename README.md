@@ -4,20 +4,27 @@
 
 ## Table of Contents
 
-+ [Project Objective](#-project-objective)
-+ [Project Files](#-project-files)
-+ [Project Tree](#-project-tree)
-+ [Workflow](#-workflow)
-  - [1. Python (Data Cleaning & Fact + Keyword Table Creation)](#-1-python-data-cleaning--fact--keyword-table-creation)
-  - [2. Excel (Other Dimension Table Generation)](#-2-excel-other-dimension-table-generation)
-  - [3. MySQL (Fact Table Structure First, Then Imports & Keys)](#-3-mysql-fact-table-structure-first-then-imports--keys)
-  - [4. Power BI (Visualization, Modeling & DAX)](#-4-power-bi-visualization-modeling--dax)
-+ [Data Model Overview](#-data-model-overview)
-+ [Tools Used](#️-tools-used)
-+ [Key Features](#-key-features)
-+ [License](#-license)
-+ [Contributing](#-contributing)
-+ [Author](#-author)
++ [Project Objective](#project-objective)
++ [Project Files](#project-files)
+  - [1. Data Files](#1-data-files)
+  - [2. Scripts & Notebooks](#2-scripts--notebooks)
+  - [3. Reports](#3-reports)
++ [Tools and Technologies](#tools-and-technologies)
++ [Setup & Installation](#setup--installation)
++ [Project Workflow](#project-workflow)
+  - [1. Database Creation](#1-database-creation)
+  - [2. ETL Process](#2-etl-process)
+  - [3. Exploratory Data Analysis (EDA)](#3-exploratory-data-analysis-eda)
+  - [4. Visualization & Dashboards](#4-visualization--dashboards)
+  - [5. Reporting](#5-reporting)
++ [Analysis Summary & Key Insights](#analysis-summary--key-insights)
+  - [1. Seasonal Trends](#1-seasonal-trends)
+  - [2. Categorical Data Insights](#2-categorical-data-insights)
+  - [3. Visual Insights](#3-visual-insights)
++ [Project Structure](#project-structure)
++ [Contributing](#contributing)
++ [License](#license)
++ [Author](#author)
 
 ## Project Objective
 
@@ -296,5 +303,3 @@ Hi, I'm Hemant, a data enthusiast passionate about turning raw data into meaning
 📫 **Let’s connect:**
 - LinkedIn : [LinkedIn Profile](https://www.linkedin.com/in/hemant1491/)  
 - Email : hemant4dsci@gmail.com
-
-
