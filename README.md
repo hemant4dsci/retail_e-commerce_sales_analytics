@@ -2,9 +2,7 @@
 
 **This project explores sales and profitability in the retail and e-commerce sector. The company has enjoyed steady sales growth, but profit margins have not kept pace. Management is particularly concerned about the impact of product returns, aggressive discounting, and uneven regional performance. Our analysis takes a closer look at these challenges by breaking down profitability across products, geographies, and sales channels, while also examining trends over time. The findings highlight where revenue is leaking and provide practical recommendations the business can act on to strengthen margins and support sustainable growth.**
 
----
-
->## Table of Contents
+## Table of Contents
 
 + [Project Objective](#-project-objective)
 + [Project Files](#-project-files)
@@ -21,9 +19,7 @@
 + [Contributing](#-contributing)
 + [Author](#-author)
 
----
-
->## Project Objective
+## Project Objective
 
 The project aims to:
 
@@ -37,9 +33,7 @@ The project aims to:
 
 + Highlight actionable insights and recommendations to improve overall profitability.
 
----
-
->## Project Files
+## Project Files
 
 ### 1. Data Files
 
@@ -53,17 +47,12 @@ The project aims to:
     - `data/raw/product_sub_category.csv` – Product Sub-Category Table
     - `data/raw/products.csv` – Product Details Table
 
----
-
 ### 2. Scripts & Notebooks
 
 + `sql/create_db_load_data.sql` – SQL script to create database and load tables
-+ `scripts/db_sql_etl_process.py` – Executes the full ETL process
-+ `scripts/report_generator.py` – Generates summary reports automatically
-+ `notebooks/01_db_etl_execute.ipynb` – Notebook to execute ETL process
++ `scripts/db_sql_etl_process.py` – full ETL pipline
++ `notebooks/01_db_etl_execute.ipynb` – Notebook to execute ETL process and generate consolidated **sales summary** table.
 + `notebooks/02_exploratory_data_analysis.ipynb` – Performs Exploratory Data Analysis
-
----
 
 ### 3. Reports
 
@@ -72,13 +61,172 @@ The project aims to:
 + Figures
     - `reports/figures/` – Plots and visualizations, e.g., correlation plots, profit analysis, distributions
 + Summary Reports
-    - `reports/summary_reports/main_report.pdf` – PDF report
+    - `reports/summary_reports/main_report.pdf` – Detailed analysis report
 
----
+## Tools and Technologies
 
->## 📂 Project Tree
+| **Tool/Library**    |   **Purpose**                                |
+|--------------------|-----------------------------------------------|
+| **Python**          | Core programming language for data analysis. |
+| **NumPy**           | Numerical computations and array operations.  |
+| **Pandas**          | Data manipulation and preprocessing.          |
+| **Matplotlib**      | Data visualization with static plots.         |
+| **Seaborn**         | Statistical data visualization.                |
+| **SciPy**           | Scientific computing and advanced statistics. |
+| **SQLAlchemy**      | SQL toolkit and ORM for database interaction. |
+| **PyMySQL**         | MySQL database connector for Python.          |
+| **MySQL**           | Relational database management system.        |
+| **Power BI**        | Dashboard creation and business reporting.     |
+| **Jupyter Notebook**| Interactive coding and presentation environment. |
+| **VS Code**         | Integrated development environment (IDE).     |
+| **Markdown**        | Documentation and README formatting.           |
 
+## Setup & Installation
+
+Follow these steps to set up the project locally:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/hemant4dsci/walmart_sales_analysis.git
 ```
+
+### 2. Create a virtual enviroment
+```bash
+# For Windows
+python -m venv venv
+venv\Scripts\activate
+
+# For macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+## Project Workflow
+
+The project workflow is organized into the following steps:
+
+### 1. Database Creation
++ Execute `sql/create_db_load_data.sql` in MySQL Workbench.  
++ This script creates the database schema and loads all **fact** and **dimension** tables:  
+    - `sales.csv` (Fact table)  
+    - `calendar.csv`, `channel.csv`, `geography.csv`, `product_sub_category.csv`, `products.csv` (Dimension tables)  
+
+### 2. ETL Process
++ The script extracts raw data, loads it into the database, and applies transformations to prepare structured table.  
++ For interactive execution, open `notebooks/01_db_etl_execute.ipynb` and **execute every cell in order**:
+    - One of the notebook cells imports and calls a custom function from `scripts/db_sql_etl_process.py` which runs the entire ETL pipeline and creates the consolidated **sales summary** table.
+    - Example (pseudo-code of that cell):
+  
+    ```python
+    import sys
+
+    sys.path.append("../scripts")
+    from db_sql_etl_process import create_sales_summary
+
+    create_sales_summary(engine)
+    ```
++ After execution of ETL, Database Tables relations :
+    ![After ETL Database Table Relation](reports/figures/after_etl_db_table_realtion.png)
+
+### 3. Exploratory Data Analysis (EDA)  
+- Open and run each cell of `notebooks/02_exploratory_data_analysis.ipynb` step by step to explore the cleaned and transformed data.  
+- The notebook provides a detailed investigation of sales and profitability patterns through:  
+
+#### Summary Statistics
+- Key metrics for **Sales, Net Sales, Returns, Discounts, Cost, Net Profit, and Profit Margin**.  
+- Example visualization:  
+  ![Summary Statistics](reports/figures/summary_stats.png)
+
+#### Univariate Analysis
+- Distribution of **Returns, Discounts, Cost, Net Sales, Net Profit, and Profit Margin** using histograms.  
+- Identification of the **most frequent Product Categories and Brands**.
+
+#### Bivariate Analysis
+- **Correlation analysis** – quantifies relationships between sales, returns, discounts, and profitability.  
+  ![Correlation Plot](reports/figures/correlation_plot.png)  
+- **Sales channel profitability analysis** – identifies which **sales channels** generate the highest **profit and margins**.  
+- **Product Category Contribution Analysis** – evaluates the percentage contribution of each **Product Category** to overall metrics.  
+- **Impact of discounts and returns on profitability** – analyzes how **discount amounts** and **return amounts** affect overall **profit and margins**.  
+- **Sales vs Profit Margin across all countries** – compares revenue and profitability performance across different geographies.
+
+#### Time-Series Analysis 
+- **Impact of returns and discounts on sales over time** – analyzes how **return amounts** and **discount amounts** influence **sales trends**.  
+- **Profit margin trends over time** – tracks whether **profit margins** are improving or declining.  
+- Example visualization:  
+  ![Quarterly Sales, Returns, Discounts](reports/figures/qtr_sales_ruturn_discount.png)
+
+#### Hypothesis Testing
+- **Profit margin variation across countries** – ANOVA test was performed to determine if **profit margins significantly differ among countries**.  
+  - **Result:** There is **no significant difference** in profit margins among countries.  
+  - **Interpretation:** Since the **p-value is greater than the significance level (α)**, we **fail to reject the null hypothesis**, indicating that profit margins are statistically similar across countries.
+
+
+> For a summary of actionable insights derived from this analysis, see the **Analysis Summary & Key Insights** section below.
+
+### 4. Visualization & Dashboards 
+
++ Visualizations
+    + All visualizations generated during the EDA are saved in:  
+        - `reports/figures/`
+    + These include summary statistics plots, histograms, correlation and bivariate plots, time-series trends, and discount/return impact visualizations.
+
++ Dashboard
+    + Use Power BI dashboard (`reports/dashboards/walmart_sales_analysis_dashboard.pbix`) to visualize insights.  
+    + Covers sales trends, profitability, country-level performance, and channel comparisons.
+   
+### 5. Reporting 
+
+- The final report, including all visuals and detailed analysis, is documented in `reports/summary_reports/main_report.pdf`.  
+- Visuals and plots are included to support insights and recommendations.
+
+## Analysis Summary & Key Insights
+
+The analysis provides a comprehensive understanding of sales, profitability, and business performance based on the Walmart dataset.
+
+### 1. Seasonal Trends
+- **Quarterly and Yearly Sales Patterns:**  
+  - Sales show clear seasonal fluctuations throughout the year.  
+  - Returns and discounts have a measurable impact on sales volume over time.
+
+- **Profitability Over Time:**  
+  - Overall profit margins are generally consistent across periods.  
+  - Discounts and returns negatively affect net profit, with varying impact by product category.
+
+- **Holiday Season Impact:**  
+  - During the holiday season, profit margins decline rapidly, indicating the need for strategic discounting, promotions, and inventory planning.
+
+### 2. Categorical Data Insights
+- **Country-Level Performance:**  
+  - Profit margins are statistically similar across countries (ANOVA test, p-value > α).  
+  - The **United States** has the highest sales volume but exhibits the lowest profit margin (50.9%), highlighting potential cost or discount management opportunities.
+
+- **Sales Channel Performance:**  
+  - The **Store channel** drives more than **50% of total profit**, making it the most profitable channel.  
+  - The **Catalog channel** underperforms, highlighting opportunities to improve efficiency or optimize marketing strategies.
+
+- **Product & Category Insights:**  
+  - **Home Appliances** leads in sales (29.5%) but also has high returns (36.6%), possibly due to **quality issues or return policy abuse**.  
+  - Monitoring key categories helps optimize inventory and promotions.
+
+- **Brand Performance:**  
+  - Certain brands generate the most sales and profit, guiding focus for inventory planning and marketing.
+
+### 3. Visual Insights
+- Interactive dashboards and visualizations were created in **Power BI** to explore:  
+  - Seasonal sales and profitability trends across countries.  
+  - Channel performance and product/category contributions.  
+  - Impact of discounts and returns on profitability over time.
+
+> For full detailed analysis and visualizations, refer to `reports/summary_reports/main_report.pdf`.
+
+## 📂 Project Structure
+
+```bash
 walmart_sales_analysis/
 │
 ├─ data/                        # Datasets (raw, interim, final)
@@ -130,152 +278,18 @@ walmart_sales_analysis/
 └─ requirements.txt             # Python dependencies
 
 ```
----
 
-
->## Project Workflow
-
-The project workflow is organized into the following steps:
-
-### 1. Database Creation
-+ Execute `sql/create_db_load_data.sql` in MySQL.  
-+ This script creates the database schema and loads all **fact** and **dimension** tables:  
-    - `sales.csv` (Fact table)  
-    - `calendar.csv`, `channel.csv`, `geography.csv`, `product_sub_category.csv`, `products.csv` (Dimension tables)  
-
-### 2. ETL Process
-+ The script extracts raw data, loads it into the database, and applies transformations to prepare structured table.  
-+ For interactive execution, open `notebooks/01_db_etl_execute.ipynb` and **execute every cell in order**:
-    - One of the notebook cells imports and calls a custom function from `scripts/db_sql_etl_process.py` which runs the entire ETL pipeline and creates the consolidated **sales summary** table.
-    - Example (pseudo-code of that cell):
-  
-    ```python
-    import sys
-
-    sys.path.append("../scripts")
-    from db_sql_etl_process import create_sales_summary
-
-    create_sales_summary(engine)
-    ```
-
-### 3. Exploratory Data Analysis (EDA)  
-- Open and run each cell of `notebooks/02_exploratory_data_analysis.ipynb` step by step to explore the cleaned and transformed data.  
-- The notebook provides a detailed investigation of sales and profitability patterns through:  
-
-#### Summary Statistics
-- Key metrics for **Sales, Net Sales, Returns, Discounts, Cost, Net Profit, and Profit Margin**.  
-- Example visualization:  
-  ![Summary Statistics](reports/figures/summary_stats.png)
-
-#### Univariate Analysis
-- Distribution of **Returns, Discounts, Cost, Net Sales, Net Profit, and Profit Margin** using histograms.  
-- Identification of the **most frequent Product Categories and Brands**.
-
-#### Bivariate Analysis
-- **Correlation analysis** – quantifies relationships between sales, returns, discounts, and profitability.  
-  ![Correlation Plot](reports/figures/correlation_plot.png)  
-- **Sales channel profitability analysis** – identifies which **sales channels** generate the highest **profit and margins**.  
-- **Product Category Contribution Analysis** – evaluates the percentage contribution of each **Product Category** to overall metrics.  
-- **Impact of discounts and returns on profitability** – analyzes how **discount amounts** and **return amounts** affect overall **profit and margins**.  
-- **Sales vs Profit Margin across all countries** – compares revenue and profitability performance across different geographies.
-
-#### Time-Series Analysis 
-- **Impact of returns and discounts on sales over time** – analyzes how **return amounts** and **discount amounts** influence **sales trends**.  
-- **Profit margin trends over time** – tracks whether **profit margins** are improving or declining.  
-- Example visualization:  
-  ![Quarterly Sales, Returns, Discounts](reports/figures/qtr_sales_ruturn_discount.png)
-
-#### Hypothesis Testing
-- **Profit margin variation across countries** – ANOVA test was performed to determine if **profit margins significantly differ among countries**.  
-  - **Result:** There is **no significant difference** in profit margins among countries.  
-  - **Interpretation:** Since the **p-value is greater than the significance level (α)**, we **fail to reject the null hypothesis**, indicating that profit margins are statistically similar across countries.
-
-
-> For a summary of actionable insights derived from this analysis, see the **Key Insights** section below.
-
-
-
-### 4. Visualization & Dashboards 
-
-+ Visualizations
-    + All visualizations generated during the EDA are saved in:  
-        - `reports/figures/`
-    + These include summary statistics plots, histograms, correlation and bivariate plots, time-series trends, and discount/return impact visualizations.
-
-+ Dashboard
-    + Use Power BI dashboard (`reports/dashboards/walmart_sales_analysis_dashboard.pbix`) to visualize insights.  
-    + Covers sales trends, profitability, country-level performance, and channel comparisons.
-   
-### 5. Reporting 
-
-- The final report, including all visuals and detailed analysis, is documented in `reports/summary_reports/main_report.pdf`.  
-- Visuals and plots are included to support insights and recommendations.
-  
-
----
-
-## 🧩 Data Model Overview
-
-| Table Name              | Type         | Description                                | Key Field     | Created Using |
-|-------------------------|--------------|--------------------------------------------|---------------|----------------|
-| `website_traffic_data`  | Fact Table   | Keyword-level AdWords traffic metrics      | `keyword_id`  | Python          |
-| `keyword`               | Dimension    | Keyword ID and name mapping                | `keyword_id`  | Python          |
-| `competition`           | Dimension    | Keyword competition scores                 | `keyword_id`  | Excel           |
-| `keyword_difficulty`    | Dimension    | Keyword difficulty ratings                 | `keyword_id`  | Excel           |
-
----
-
-## 🛠️ Tools Used
-
-| Tool/Library        | Purpose                                                                 |
-|---------------------|-------------------------------------------------------------------------|
-| **Python**           | Assign `keyword_id`, create fact and keyword dimension tables           |
-| **Jupyter Notebook** | Interactive Python code and data processing                             |
-| **Pandas**           | Data manipulation and cleaning                                          |
-| **NumPy**            | Numerical transformation support                                        |
-| **Excel**            | Create `competition` and `keyword_difficulty` dimension tables          |
-| **MySQL**            | Define fact table structure first, then import data & enforce relations |
-| **Power BI**         | Build dashboards, model schema, and use DAX for reporting               |
-
----
-
-## ✅ Key Features
-- Assign and manage keyword IDs using Python  
-- Build normalized relational structure in MySQL  
-- Use Excel for additional dimension data  
-- Apply schema constraints and validate relationships with ER diagrams  
-- Model and visualize insights in Power BI with custom DAX measures
-
----
-
-## 🚀 How to Use
-1. Run Python notebook to generate:
-   - `data/final/website_traffic_data.csv`  
-   - `data/final/keyword.csv`  
-2. Create `data/final/competition.csv` and `data/final/keyword_difficulty.csv` in Excel  
-3. In MySQL:
-   - Create structure for `website_traffic_data` first  
-   - Import all `.csv` files  
-   - Run `sql/traffic_data_script.sql` to define schema and constraints  
-   - Validate schema with ERD view  
-4. Connect Power BI to MySQL  
-5. Model the data and use DAX to create KPIs and dashboards
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
-
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
 
----
 
-## 👤 Author
+## License
+
+This project is licensed under the MIT License.
+
+
+## Author
 
 Hi, I'm Hemant, a data enthusiast passionate about turning raw data into meaningful business insights.
 
@@ -283,5 +297,4 @@ Hi, I'm Hemant, a data enthusiast passionate about turning raw data into meaning
 - LinkedIn : [LinkedIn Profile](https://www.linkedin.com/in/hemant1491/)  
 - Email : hemant4dsci@gmail.com
 
----
 
