@@ -137,6 +137,7 @@ The project workflow is organized into the following steps:
 
     create_sales_summary(engine)
     ```
+    
     - SQL query to extract data from fact and dimensions tables.
 
     ```sql
@@ -190,7 +191,7 @@ The project workflow is organized into the following steps:
             gg.country_name;
     ```
 
-    - Python code of summary table creation in data-base
+    - Python code for creating sales summary table in data-base.
 
     ```python
     from sqlalchemy import Column, INTEGER, NUMERIC, VARCHAR, DATE
