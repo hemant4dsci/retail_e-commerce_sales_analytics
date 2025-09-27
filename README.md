@@ -161,34 +161,34 @@ The project workflow is organized into the following steps:
             product_key,
             geo_key,
             product_sub_category_key
-        )
-        SELECT
-            ss.dates,
-            ch.channel_name AS channel,
-            pd.brand_name AS brand,
-            psc.product_category_name AS product_category,
-            gg.country_name AS country,
-            MIN(ss.unit_cost) AS unit_cost,
-            MIN(ss.unit_price) AS unit_price,
-            SUM(ss.sales_quantity) AS sales_quantity,
-            SUM(ss.return_amount) AS return_amount,
-            SUM(ss.discount_amount) AS discount_amount
-        FROM
-            sales_summary ss
-            LEFT JOIN channels ch
-                ON ss.channel_key = ch.channel_key
-            LEFT JOIN products pd
-                ON ss.product_key = pd.product_key
-            LEFT JOIN geography gg
-                ON ss.geo_key = gg.geo_key
-            LEFT JOIN product_sub_category psc
-                ON ss.product_sub_category_key = psc.product_sub_category_key
-        GROUP BY
-            ss.dates,
-            ch.channel_name,
-            pd.brand_name,
-            psc.product_category_name,
-            gg.country_name;
+    )
+    SELECT
+        ss.dates,
+        ch.channel_name AS channel,
+        pd.brand_name AS brand,
+        psc.product_category_name AS product_category,
+        gg.country_name AS country,
+        MIN(ss.unit_cost) AS unit_cost,
+        MIN(ss.unit_price) AS unit_price,
+        SUM(ss.sales_quantity) AS sales_quantity,
+        SUM(ss.return_amount) AS return_amount,
+        SUM(ss.discount_amount) AS discount_amount
+    FROM
+        sales_summary ss
+        LEFT JOIN channels ch
+            ON ss.channel_key = ch.channel_key
+        LEFT JOIN products pd
+            ON ss.product_key = pd.product_key
+        LEFT JOIN geography gg
+            ON ss.geo_key = gg.geo_key
+        LEFT JOIN product_sub_category psc
+            ON ss.product_sub_category_key = psc.product_sub_category_key
+    GROUP BY
+        ss.dates,
+        ch.channel_name,
+        pd.brand_name,
+        psc.product_category_name,
+        gg.country_name;
     ```
 
     - Python code for creating sales summary table in data-base.
