@@ -127,7 +127,7 @@ The project workflow is organized into the following steps:
 + The script extracts raw data, loads it into the database, and applies transformations to prepare structured table.  
 + For interactive execution, open `notebooks/01_db_etl_execute.ipynb` and **execute every cell in order**:
     - One of the notebook cells imports and calls a custom function from `scripts/db_sql_etl_process.py` which runs the entire ETL pipeline and creates the consolidated **sales summary** table.
-    - Example (pseudo-code of that cell):
+    - Code of that cell
   
     ```python
     import sys
@@ -136,6 +136,88 @@ The project workflow is organized into the following steps:
     from db_sql_etl_process import create_sales_summary
 
     create_sales_summary(engine)
+    ```
+    - SQL query to extract data from fact and dimensions tables.
+
+    ```sql
+    WITH sales_summary AS(
+        SELECT
+            dates,
+            channel_key,
+            product_key,
+            geo_key,
+            product_sub_category_key,
+            MIN(unit_cost) AS unit_cost,
+            MIN(unit_price) AS unit_price,
+            SUM(sales_quantity) AS sales_quantity,
+            SUM(return_amount) AS return_amount,
+            SUM(discount_amount) AS discount_amount
+        FROM
+            sales
+        GROUP BY 
+            dates,
+            channel_key,
+            product_key,
+            geo_key,
+            product_sub_category_key
+        )
+        SELECT
+            ss.dates,
+            ch.channel_name AS channel,
+            pd.brand_name AS brand,
+            psc.product_category_name AS product_category,
+            gg.country_name AS country,
+            MIN(ss.unit_cost) AS unit_cost,
+            MIN(ss.unit_price) AS unit_price,
+            SUM(ss.sales_quantity) AS sales_quantity,
+            SUM(ss.return_amount) AS return_amount,
+            SUM(ss.discount_amount) AS discount_amount
+        FROM
+            sales_summary ss
+            LEFT JOIN channels ch
+                ON ss.channel_key = ch.channel_key
+            LEFT JOIN products pd
+                ON ss.product_key = pd.product_key
+            LEFT JOIN geography gg
+                ON ss.geo_key = gg.geo_key
+            LEFT JOIN product_sub_category psc
+                ON ss.product_sub_category_key = psc.product_sub_category_key
+        GROUP BY
+            ss.dates,
+            ch.channel_name,
+            pd.brand_name,
+            psc.product_category_name,
+            gg.country_name;
+    ```
+
+    - Python code of summary table creation in data-base
+
+    ```python
+    from sqlalchemy import Column, INTEGER, NUMERIC, VARCHAR, DATE
+    from sqlalchemy.orm import declarative_base
+
+    # Defining table as a class
+    class SalesSummary(Base):
+        __tablename__ = "sales_summary"
+
+        # Columns
+        id = Column(INTEGER, primary_key=True, autoincrement=True)  # Primary key
+        dates = Column(DATE)
+        channel = Column(VARCHAR(255))
+        brand = Column(VARCHAR(255))
+        product_category = Column(VARCHAR(255))
+        country = Column(VARCHAR(255))
+        return_amount = Column(NUMERIC(10, 2))
+        discount_amount = Column(NUMERIC(10, 2))
+        total_cost = Column(NUMERIC(15, 2))
+        total_sales = Column(NUMERIC(15, 2))
+        net_sales = Column(NUMERIC(15, 2))
+        net_profit = Column(NUMERIC(15, 2))
+        profit_margin = Column(NUMERIC(10, 2))
+
+
+    Base.metadata.drop_all(engine)  # Drop old table if exist
+    Base.metadata.create_all(engine)  # Create new table
     ```
 + After execution of ETL, Database Tables relations :
     ![After ETL Database Table Relation](reports/figures/after_etl_db_table_realtion.png)
