@@ -137,7 +137,7 @@ The project workflow is organized into the following steps:
 
     create_sales_summary(engine)
     ```
-    
+
     - SQL query to extract data from fact and dimensions tables.
 
     ```sql
@@ -196,6 +196,9 @@ The project workflow is organized into the following steps:
     ```python
     from sqlalchemy import Column, INTEGER, NUMERIC, VARCHAR, DATE
     from sqlalchemy.orm import declarative_base
+
+    # Base class for ORM
+    Base = declarative_base()
 
     # Defining table as a class
     class SalesSummary(Base):
