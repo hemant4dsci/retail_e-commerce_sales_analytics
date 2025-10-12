@@ -127,8 +127,26 @@ The project workflow is organized into the following steps:
 + The script extracts raw data, loads it into the database, and applies transformations to prepare structured table.  
 + For interactive execution, open `notebooks/01_db_etl_execute.ipynb` and **execute every cell in order**:
     - One of the notebook cells imports and calls a custom function from `scripts/db_sql_etl_process.py` which runs the entire ETL pipeline and creates the consolidated **sales summary** table.
+    ```python
+    from sqlalchemy import create_engine
+
+    """Connection Details"""
+
+    user = "root"  # your MySQL username
+    password = "tictok#2020"
+    host = "localhost"  # your MySQL server IP
+    port = "3306"
+    database = "contoso_sales"
+
+    try:
+        engine = create_engine(
+            f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}"
+        )
+    except Exception as exc:
+        print("Error while connecting to mysql", exc)
+    ```
+    
     - Code of that cell
-  
     ```python
     import sys
 
