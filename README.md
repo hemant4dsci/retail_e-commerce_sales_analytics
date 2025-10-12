@@ -133,10 +133,10 @@ The project workflow is organized into the following steps:
     """Connection Details"""
 
     user = "root"  # your MySQL username
-    password = "tictok#2020"
+    password = "password"
     host = "localhost"  # your MySQL server IP
     port = "3306"
-    database = "contoso_sales"
+    database = "walmart_sales"
 
     try:
         engine = create_engine(
