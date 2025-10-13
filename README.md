@@ -58,7 +58,7 @@ The project files are as follows :
 
 ## 2. Scripts & Notebooks
 
-+ `sql/create_db_load_data.sql` – SQL script to create database and load tables
++ `sql_scripts/create_db_load_data.sql` – SQL script to create database and load tables
 + `scripts/db_sql_etl_process.py` – full ETL pipline
 + `notebooks/01_db_etl_execute.ipynb` – Notebook to execute ETL process and generate consolidated **sales summary** table.
 + `notebooks/02_exploratory_data_analysis.ipynb` – Performs Exploratory Data Analysis
@@ -120,7 +120,7 @@ pip install -r requirements.txt
 The project workflow is organized into the following steps:
 
 ## 1. Database Creation
-+ Execute `sql/create_db_load_data.sql` in MySQL Workbench.  
++ Execute `sql_scripts/create_db_load_data.sql` in MySQL Workbench.  
 + This script creates the database schema and loads all **fact** and **dimension** tables:  
     - `sales.csv` (Fact table)  
     - `calendar.csv`, `channel.csv`, `geography.csv`, `product_sub_category.csv`, `products.csv` (Dimension tables)  
