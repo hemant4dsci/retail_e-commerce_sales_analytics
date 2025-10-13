@@ -344,24 +344,24 @@ The analysis provides a comprehensive understanding of sales, profitability, and
 ```bash
 walmart_sales_analysis/
 │
-├─ data/                        # Datasets (raw, interim, final)
-│  ├─ final/                    # Final processed data
-│  ├─ interim/                  # Intermediate cleaned data
-│  └─ raw/                      # Raw data sources
-│     ├─ calendar.csv                       # Dates table
-│     ├─ channel.csv                        # Sales channel table
-│     ├─ geography.csv                      # Country & continent table
-│     ├─ product_sub_category.csv           # Product sub-category table
-│     ├─ products.csv                       # Product details table
-│     └─ sales.csv                          # Sales transactions (Fact table)
+├─ data/                                    # Datasets (raw, interim, final)
+│  ├─ final/                                # Final processed data
+│  ├─ interim/                              # Intermediate cleaned data
+│  └─ raw/                                  # Raw data sources
+│     ├─ calendar.csv
+│     ├─ channel.csv
+│     ├─ geography.csv
+│     ├─ product_sub_category.csv
+│     ├─ products.csv
+│     └─ sales.csv
 │
-├─ logs/                        # Log files for pipeline runs
+├─ logs/                                    # Log files for pipeline runs
 │
-├─ notebooks/                   # Jupyter notebooks
-│  ├─ 01_db_etl_execute.ipynb               # ETL process execute
-│  └─ 02_exploratory_data_analysis.ipynb    # Exploratory data analysis
+├─ notebooks/                               # Jupyter notebooks
+│  ├─ 01_db_etl_execute.ipynb
+│  └─ 02_exploratory_data_analysis.ipynb
 │
-├─ reports/
+├─ reports/                                 # Reports and Visualization
 │  ├─ dashboards/                           # Power BI dashboards
 │  │  └─ walmart_sales_analysis_dashboard.pbix
 │  ├─ figures/                              # Visualizations & plots
@@ -379,20 +379,20 @@ walmart_sales_analysis/
 │  │  ├─ sales_profit_brand.png
 │  │  ├─ sales_profit_discount_returns_product_category.png
 │  │  └─ summary_stats.png
-│  └─ summary_reports/          # PDF reports
+│  └─ summary_reports/                      # PDF reports
 │     └─ walmart_sales_analytics_report.pdf
 │
-├─ scripts/                     # Python scripts
-│  └─ db_sql_etl_process.py                 # SQL ETL pipeline
+├─ scripts/                                 # Python scripts
+│  └─ db_sql_etl_process.py
 │
-├─ sql_scripts/                         # SQL schema & data load
-│  └─ create_db_load_data.sql               # Create database and load tables
+├─ sql_scripts/                             # SQL Scripts
+│  └─ create_db_load_data.sql
 │
 ├─ .gitattributes
 ├─ .gitignore
 ├─ LICENCE
 ├─ README.md
-└─ requirements.txt             # Python dependencies
+└─ requirements.txt                         # Python dependencies
 
 ```
 
