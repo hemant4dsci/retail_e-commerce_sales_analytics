@@ -1,4 +1,4 @@
-# **WalMart Sales Analytics Project**
+# WalMart Sales Analytics Project
 
 **This project explores sales and profitability in the retail and e-commerce sector. The company has enjoyed steady sales growth, but profit margins have not kept pace. Management is particularly concerned about the impact of product returns, aggressive discounting, and uneven regional performance. Our analysis takes a closer look at these challenges by breaking down profitability across products, geographies, and sales channels, while also examining trends over time. The findings highlight where revenue is leaking and provide practical recommendations the business can act on to strengthen margins and support sustainable growth.**
 
@@ -42,17 +42,19 @@ The project aims to:
 
 # Project Files
 
+The project files are as follows :
+
 ## 1. Data Files
 
-+ Fact Tables
-    - `data/raw/sales.csv` – Sales Transactions Table
+### Fact Tables
++ `data/raw/sales.csv` – Sales Transactions Table
 
-+ Dimension Tables
-    - `data/raw/calendar.csv` – Dates Table
-    - `data/raw/channel.csv` – Sales Channel Table
-    - `data/raw/geography.csv` – Country and Continent Table
-    - `data/raw/product_sub_category.csv` – Product Sub-Category Table
-    - `data/raw/products.csv` – Product Details Table
+### Dimension Tables
++ `data/raw/calendar.csv` – Dates Table
++ `data/raw/channel.csv` – Sales Channel Table
++ `data/raw/geography.csv` – Country and Continent Table
++ `data/raw/product_sub_category.csv` – Product Sub-Category Table
++ `data/raw/products.csv` – Product Details Table
 
 ## 2. Scripts & Notebooks
 
@@ -63,12 +65,12 @@ The project aims to:
 
 ## 3. Reports
 
-+ Dashboards
-    - `reports/dashboards/walmart_sales_analysis_dashboard.pbix` – Power BI dashboard
-+ Figures
-    - `reports/figures/` – Plots and visualizations, e.g., correlation plots, profit analysis, distributions
-+ Summary Reports
-    - `reports/summary_reports/walmart_sales_analytics_report.pdf` – Detailed analysis report
+### Dashboards
++ `reports/dashboards/walmart_sales_analysis_dashboard.pbix` – Power BI dashboard
+### Figures
++ `reports/figures/` – Plots and visualizations, e.g., correlation plots, profit analysis, distributions
+### Summary Reports
++ `reports/summary_reports/walmart_sales_analytics_report.pdf` – Detailed analysis report
 
 # Tools and Technologies
 
@@ -233,7 +235,7 @@ The project workflow is organized into the following steps:
 ### Summary Statistics
 - Key metrics for **Sales, Net Sales, Returns, Discounts, Cost, Net Profit, and Profit Margin**.  
 - Example visualization:  
-  ![Summary Statistics](reports/figures/summary_stats.png)
+![Summary Statistics](reports/figures/summary_stats.png)
 
 ### Univariate Analysis
 - Distribution of **Returns, Discounts, Cost, Net Sales, Net Profit, and Profit Margin** using histograms.  
@@ -263,16 +265,16 @@ The project workflow is organized into the following steps:
 
 ## 4. Visualization & Dashboards 
 
-+ Visualizations
-    + All visualizations generated during the EDA are saved in:  
-        - `reports/figures/`
-    + These include summary statistics plots, histograms, correlation and bivariate plots, time-series trends, and discount/return impact visualizations.
+### Visualizations
++ All visualizations generated during the EDA are saved in:  
+    - `reports/figures/`
++ These include summary statistics plots, histograms, correlation and bivariate plots, time-series trends, and discount/return impact visualizations.
 
-+ Dashboard
-    + Use Power BI dashboard (`reports/dashboards/walmart_sales_analysis_dashboard.pbix`) to visualize insights.  
-    + Covers sales trends, profitability, country-level performance, and channel comparisons.
+### Dashboard
++ Use Power BI dashboard (`reports/dashboards/walmart_sales_analysis_dashboard.pbix`) to visualize insights.  
++ Covers sales trends, profitability, country-level performance, and channel comparisons.
 
-    ![Dashboard Preview](reports/figures/dashboard_preview.png)
+![Dashboard Preview](reports/figures/dashboard_preview.png)
    
 ## 5. Reporting 
 
