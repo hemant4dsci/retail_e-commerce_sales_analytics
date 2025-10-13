@@ -98,3 +98,9 @@ venv/
 
 # exclude data from source control by default
 # /data/
+
+# database notebook
+*.dbcnb
+
+# qurto markdown file
+*.qmd
