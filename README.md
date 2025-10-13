@@ -385,7 +385,7 @@ walmart_sales_analysis/
 ├─ scripts/                     # Python scripts
 │  └─ db_sql_etl_process.py                 # SQL ETL pipeline
 │
-├─ sql/                         # SQL schema & data load
+├─ sql_scripts/                         # SQL schema & data load
 │  └─ create_db_load_data.sql               # Create database and load tables
 │
 ├─ .gitattributes
