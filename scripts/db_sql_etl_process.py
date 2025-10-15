@@ -22,7 +22,7 @@ class SalesSummary(Base):
 
     # Columns
     id = Column(INTEGER, primary_key=True, autoincrement=True)  # Primary key
-    dates = Column(DATE)
+    date_key = Column(DATE)
     channel = Column(VARCHAR(255))
     brand = Column(VARCHAR(255))
     product_category = Column(VARCHAR(255))
@@ -36,35 +36,36 @@ class SalesSummary(Base):
     profit_margin = Column(NUMERIC(10, 2))
 
 
-def create_sales_summary(engine):
+def ingest_db(engine):
     # This function will merge the diffarent tables to get the overall Sales Summary
 
     logger.info("Started Sales Summary creation")
 
     summary_query = """
-        WITH sales_summary AS(
-            SELECT
-                dates,
-                channel_key,
-                product_key,
-                geo_key,
-                product_sub_category_key,
-                MIN(unit_cost) AS unit_cost,
-                MIN(unit_price) AS unit_price,
-                SUM(sales_quantity) AS sales_quantity,
-                SUM(return_amount) AS return_amount,
-                SUM(discount_amount) AS discount_amount
-            FROM
-                sales
-            GROUP BY 
-                dates,
-                channel_key,
-                product_key,
-                geo_key,
-                product_sub_category_key
-        )
+        WITH
+            sales_summary AS (
+                SELECT
+                    date_key,
+                    channel_key,
+                    product_key,
+                    geo_key,
+                    product_sub_category_key,
+                    MIN(unit_cost) AS unit_cost,
+                    MIN(unit_price) AS unit_price,
+                    SUM(sales_quantity) AS sales_quantity,
+                    SUM(return_amount) AS return_amount,
+                    SUM(discount_amount) AS discount_amount
+                FROM
+                    sales
+                GROUP BY
+                    date_key,
+                    channel_key,
+                    product_key,
+                    geo_key,
+                    product_sub_category_key
+            )
         SELECT
-            ss.dates,
+            ss.date_key,
             ch.channel_name AS channel,
             pd.brand_name AS brand,
             psc.product_category_name AS product_category,
@@ -76,16 +77,12 @@ def create_sales_summary(engine):
             SUM(ss.discount_amount) AS discount_amount
         FROM
             sales_summary ss
-            LEFT JOIN channels ch
-                ON ss.channel_key = ch.channel_key
-            LEFT JOIN products pd
-                ON ss.product_key = pd.product_key
-            LEFT JOIN geography gg
-                ON ss.geo_key = gg.geo_key
-            LEFT JOIN product_sub_category psc
-                ON ss.product_sub_category_key = psc.product_sub_category_key
+            LEFT JOIN channels ch ON ss.channel_key = ch.channel_key
+            LEFT JOIN products pd ON ss.product_key = pd.product_key
+            LEFT JOIN geographies gg ON ss.geo_key = gg.geo_key
+            LEFT JOIN product_sub_category psc ON ss.product_sub_category_key = psc.product_sub_category_key
         GROUP BY
-            ss.dates,
+            ss.date_key,
             ch.channel_name,
             pd.brand_name,
             psc.product_category_name,
