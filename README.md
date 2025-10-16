@@ -59,7 +59,7 @@ The project files are as follows :
 ## 2. Scripts & Notebooks
 
 + `sql_scripts/create_db_load_data.sql` – SQL script to create database and load tables
-+ `scripts/db_sql_etl_process.py` – full ETL pipline
++ `scripts/etl_pipeline.py` – full ETL pipline
 + `notebooks/01_db_etl_execute.ipynb` – Notebook to execute ETL process and generate consolidated **sales summary** table.
 + `notebooks/02_exploratory_data_analysis.ipynb` – Performs Exploratory Data Analysis
 
@@ -128,7 +128,7 @@ The project workflow is organized into the following steps:
 ## 2. ETL Process
 + The script extracts raw data, loads it into the database, and applies transformations to prepare structured table.  
 + For interactive execution, open `notebooks/01_db_etl_execute.ipynb` and **execute every cell in order**:
-    - One of the notebook cells imports and calls a custom function from `scripts/db_sql_etl_process.py` which runs the entire ETL pipeline and creates the consolidated **sales summary** table.
+    - One of the notebook cells imports and calls a custom function from `scripts/etl_pipeline.py` which runs the entire ETL pipeline and creates the consolidated **sales summary** table.
     ```python
     from sqlalchemy import create_engine
 
@@ -156,7 +156,7 @@ The project workflow is organized into the following steps:
     import sys
 
     sys.path.append("../scripts")
-    from db_sql_etl_process import ingest_db
+    from etl_pipeline import ingest_db
 
     ingest_db(engine)
     ```
@@ -383,7 +383,7 @@ walmart_sales_analysis/
 │     └─ walmart_sales_analytics_report.pdf
 │
 ├─ scripts/                                 # Python scripts
-│  └─ db_sql_etl_process.py
+│  └─ etl_pipeline.py
 │
 ├─ sql_scripts/                             # SQL Scripts
 │  └─ create_db_load_data.sql
