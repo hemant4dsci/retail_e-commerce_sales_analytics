@@ -17,7 +17,7 @@ CREATE TABLE calender (
 -- Insert data in calender table
 COPY calender
 FROM
-    'E:/Data Sets/costoso_data_iim/calender.csv'
+    'E:/Data Analytics Projects Projects/walmart_sales_analytics_project/data/raw/calender.csv'
 WITH
     (FORMAT CSV, HEADER TRUE, DELIMITER ',');
 
@@ -31,7 +31,7 @@ CREATE TABLE channels (
 -- Insert data in channel table
 COPY channels
 FROM
-    'E:/Data Sets/costoso_data_iim/channel.csv'
+    'E:/Data Analytics Projects Projects/walmart_sales_analytics_project/data/raw/channel.csv'
 WITH
     (FORMAT CSV, HEADER TRUE, DELIMITER ',');
 
@@ -48,7 +48,7 @@ CREATE TABLE geographies (
 -- Insert data in geography table
 COPY geographies
 FROM
-    'E:/Data Sets/costoso_data_iim/geography.csv'
+    'E:/Data Analytics Projects Projects/walmart_sales_analytics_project/data/raw/geography.csv'
 WITH
     (FORMAT CSV, HEADER TRUE, DELIMITER ',');
 
@@ -63,7 +63,7 @@ CREATE TABLE product_sub_category (
 -- Insert data in product sub-category table
 COPY product_sub_category
 FROM
-    'E:/Data Sets/costoso_data_iim/product_sub_category.csv'
+    'E:/Data Analytics Projects Projects/walmart_sales_analytics_project/data/raw/product_sub_category.csv'
 WITH
     (FORMAT CSV, HEADER TRUE, DELIMITER ',');
 
@@ -80,7 +80,7 @@ CREATE TABLE products (
 -- Insert data in products table
 COPY products
 FROM
-    'E:/Data Sets/costoso_data_iim/products.csv'
+    'E:/Data Analytics Projects Projects/walmart_sales_analytics_project/data/raw/products.csv'
 WITH
     (FORMAT CSV, HEADER TRUE, DELIMITER ',');
 
@@ -110,6 +110,6 @@ CREATE TABLE sales (
 -- Insert data in sales table
 COPY sales
 FROM
-    'E:/Data Sets/costoso_data_iim/sales.csv'
+    'E:/Data Analytics Projects Projects/walmart_sales_analytics_project/data/raw/sales.csv'
 WITH
     (FORMAT CSV, HEADER TRUE, DELIMITER ',');
