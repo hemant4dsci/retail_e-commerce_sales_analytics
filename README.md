@@ -1,4 +1,4 @@
-# WalMart Sales Analytics Project
+# Retail/E-Commerce Sales Analytics
 
 **This project explores sales and profitability in the retail and e-commerce sector. The company has enjoyed steady sales growth, but profit margins have not kept pace. Management is particularly concerned about the impact of product returns, aggressive discounting, and uneven regional performance. Our analysis takes a closer look at these challenges by breaking down profitability across products, geographies, and sales channels, while also examining trends over time. The findings highlight where revenue is leaking and provide practical recommendations the business can act on to strengthen margins and support sustainable growth.**
 
@@ -66,11 +66,11 @@ The project files are as follows :
 ## 3. Reports
 
 ### Dashboards
-+ `reports/dashboards/walmart_sales_analysis_dashboard.pbix` – Power BI dashboard
++ `reports/dashboards/retail_sales_analysis_dashboard.pbix` – Power BI dashboard
 ### Figures
 + `reports/figures/` – Plots and visualizations, e.g., correlation plots, profit analysis, distributions
 ### Summary Reports
-+ `reports/summary_reports/walmart_sales_analytics_report.pdf` – Detailed analysis report
++ `reports/summary_reports/retail_sales_analytics_report.pdf` – Detailed analysis report
 
 # Tools and Technologies
 
@@ -96,7 +96,7 @@ Follow these steps to set up the project locally:
 
 ## 1. Clone the Repository
 ```bash
-git clone https://github.com/hemant4dsci/walmart_sales_analysis.git
+git clone https://github.com/hemant4dsci/retail_e-commerce_sales_analytics.git
 ```
 
 ## 2. Create a virtual enviroment
@@ -138,7 +138,7 @@ The project workflow is organized into the following steps:
     password = "tictok#2020"  # password
     host = "localhost"  # server IP
     port = "5432"  # port no
-    database = "walmart_sales"  # Data-Base name
+    database = "retail_sales_analytics"  # Data-Base name
 
     try:
         engine = create_engine(
@@ -289,19 +289,19 @@ The project workflow is organized into the following steps:
 + These include summary statistics plots, histograms, correlation and bivariate plots, time-series trends, and discount/return impact visualizations.
 
 ### Dashboard
-+ Use Power BI dashboard (`reports/dashboards/walmart_sales_analysis_dashboard.pbix`) to visualize insights.  
++ Use Power BI dashboard (`reports/dashboards/retail_sales_analysis_dashboard.pbix`) to visualize insights.  
 + Covers sales trends, profitability, country-level performance, and channel comparisons.
 
 ![Dashboard Preview](reports/figures/dashboard_preview.png)
    
 ## 5. Reporting 
 
-- The final report, including all visuals and detailed analysis, is documented in `reports/summary_reports/walmart_sales_analytics_report.pdf`.  
+- The final report, including all visuals and detailed analysis, is documented in `reports/summary_reports/retail_sales_analytics_report.pdf`.  
 - Visuals and plots are included to support insights and recommendations.
 
 # Analysis Summary & Key Insights
 
-The analysis provides a comprehensive understanding of sales, profitability, and business performance based on the Walmart dataset.
+The analysis provides a comprehensive understanding of sales, profitability, and business performance based on the Retail/E-Commerce dataset.
 
 ## 1. Seasonal Trends
 - **Quarterly and Yearly Sales Patterns:**  
@@ -337,12 +337,12 @@ The analysis provides a comprehensive understanding of sales, profitability, and
   - Channel performance and product/category contributions.  
   - Impact of discounts and returns on profitability over time.
 
-> For full detailed analysis and visualizations, refer to `reports/summary_reports/walmart_sales_analytics_report.pdf`.
+> For full detailed analysis and visualizations, refer to `reports/summary_reports/retail_sales_analytics_report.pdf`.
 
 # Project Structure
 
 ```bash
-walmart_sales_analysis/
+Retail_sales_analytics/
 │
 ├─ data/                                    # Datasets (raw, interim, final)
 │  ├─ final/                                # Final processed data
@@ -363,7 +363,7 @@ walmart_sales_analysis/
 │
 ├─ reports/                                 # Reports and Visualization
 │  ├─ dashboards/                           # Power BI dashboards
-│  │  └─ walmart_sales_analysis_dashboard.pbix
+│  │  └─ retail_sales_analytics_dashboard.pbix
 │  ├─ figures/                              # Visualizations & plots
 │  │  ├─ after_etl_db_table_relation.png                         
 │  │  ├─ correlation_plot.png
@@ -380,7 +380,7 @@ walmart_sales_analysis/
 │  │  ├─ sales_profit_discount_returns_product_category.png
 │  │  └─ summary_stats.png
 │  └─ summary_reports/                      # PDF reports
-│     └─ walmart_sales_analytics_report.pdf
+│     └─ retail_sales_analytics_report.pdf
 │
 ├─ scripts/                                 # Python scripts
 │  └─ etl_pipeline.py
